@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access-floor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.web-container{
+    width: 100%;
+    height: 850vh;
+}
+
+/* navbar */
+
+.navbar-container{
+    width: 100%;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: aqua; */
+}
+.nav-info{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(45,42,99);
+    /* background-color: bisque;     */
+}
+.logo-section{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center ;
+    /* justify-content: center; */
+    /* background-color: blue; */
+}
+.logo-section img{
+    width: 60%;
+}
+
+.nav-contact-section{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: cornflowerblue; */
+   
+}
+.menu-logo{
+    display: none;
+}
+
+  .contact-item {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 16px;
+    gap: 2%;
+    font-family: sans-serif;
+    /* background-color: aqua; */
+  }
+
+  .contact-item img {
+    width: 30px;
+    margin-bottom: 5%;
+
+  }
+
+  .contact-item h4 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .contact-item p {
+    color: #666;
+  }
+.nav-menu{
+    width: 90%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: blueviolet; */
+}
+.nav-links {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: aqua; */
+    font-family: sans-serif;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.nav-menu button{
+    width: 12%;
+    height: 70%;
+    border-radius: 25px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    margin-right: 2%;
+    background-color: rgb(45,42,99);
+}
+
+/* banner */
+
+.banner-container{
+    width: 100%;
+    height: 100vh;
+    /* background-color: aqua; */
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50%;
+    
+}
+.slide-content h1{
+    font-family: sans-serif;
+    font-size: 60px;
+    color: white;
+    padding-left: 6%;
+    margin-top: 4%;
+}
+.slide-content p{
+    font-size: 30px;
+    font-weight: 200;
+    font-family: sans-serif;
+    color:whitesmoke;
+    padding-left: 6%;
+    margin-top: 2%;
+}
+
+.slide1 {
+    background-image: url('Access-images/banner bg_11zon.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.slide2 {
+    background-image: url('Access-images/form-image_11zon.png'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.slide3 {
+    background-image: url('Access-images/about-section_11zon.png'); 
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+/* about */
+
+.about-container{
+   width: 100%;
+   height: 120vh;
+   display: flex;
+   position: relative;
+   /* background-color: aqua; */
+}
+.about-content{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: bisque; */
+    padding-left: 5%;
+    gap: 3%;
+}
+.about-content h2{
+    font-family: sans-serif;
+    font-size: 40px;
+}
+.about-content p{
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.about-content button{
+    width: 25%;
+    height: 5%;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-bottom: 25%;
+    background-color: rgb(45,42,99);
+}
+.about-box{
+    width: 55%;
+    height: 20%;
+    position: absolute;
+    top: 70%;
+    border-radius: 25px;
+    background-image: url(Access-images/about-box.png);
+    /* background-color: rgb(211,208,204); */
+    background-repeat: no-repeat;
+    background-size: 100vw 110vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+.aboutbox-content{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* background-color: bisque; */
+    font-family: sans-serif;
+    color:whitesmoke;
+    gap: 2%;
+
+}
+.about-imagesection{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    /* background-color: brown; */
+}
+.about-imagesection img{
+    width: 80%;
+    height: 73%;
+    border-radius: 25px;
+    margin-top: 10%;
+}
+
+
+/* product */
+
+.product-container{
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(Access-images/product\ bg.jpg);;
+    background-repeat: no-repeat;
+    background-size: 100vw 150vh;
+    /* background-color: aqua; */
+}
+.product-title{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-family: sans-serif;
+    color: white;
+    padding-left: 5%;
+    /* background-color: bisque; */
+}
+.productcard-container {
+    width: 90%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* background-color: #fff; */
+    gap: 2%;
+}
+
+.product-card {
+     width: 90%;
+     height: 90%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;     
+    /* background-color: bisque; */
+
+}
+.product-image {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    background-color: #ccc;
+}
+
+.product-info {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    color: whitesmoke;
+    padding-left: 3%;
+    font-family: sans-serif;
+    background-color: rgb(45, 42, 99, 0.8); 
+}
+
+.product-info p{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 3%;
+}
+.product-info span{
+    font-size: 20PX;
+    font-weight: 400;
+    color: grey;
+}
+
+
+/* FORM */
+
+.formpage-container{
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    /* background-color: aqua; */
+}
+.form-image{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: burlywood; */
+}
+.form-image img{
+    width: 80%;
+    height: 80%;
+    border-radius: 25px;
+}
+.form-image img:hover{
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form-image img:hover:hover{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.form-container {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+}
+.form-container form{
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+    align-items: center;
+    /* background-color: blueviolet; */
+}
+.form-container form h2{
+    font-family: sans-serif;
+    font-size: 36px;
+    margin-right: 45%;
+}
+.input-name{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* background-color: aqua; */
+    color: grey;
+}
+.input-name input{
+    width: 42%;
+    height: 100%;
+    border-radius: 25px;
+    border: 1px solid grey;
+    font-family: sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+.input-mail{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: grey;
+ 
+}
+.input-mail input{
+    width:42%;
+    height: 100%;
+    border-radius: 25px;
+    border: 1px solid grey;
+    font-family: sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+.message{
+    width: 90%;
+    height: 60%;
+    /* background-color: aqua; */
+    display: flex;
+    gap: 10%;
+    flex-direction: column;
+}
+.message textarea{
+    width: 100%;
+    height: 70%;
+    border-radius: 25px;
+    border: 1px solid grey;
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 3%;
+    color: grey;
+}
+.message button{
+    width: 20%;
+    height: 15%;
+    border-radius: 25px;
+    border: none;
+    background-color: rgb(45,42,99);
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: whitesmoke;
+    font-weight:lighter;
+}
+
+/* projects */
+
+
+.projectpage-container{
+    width: 100%;
+    height: 160vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: aqua; */
+}
+.projectpage-container .title{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    padding-left: 4%;
+    font-size: 32px;
+    font-family: sans-serif;
+    /* background: chartreuse; */
+}
+
+
+.Projectbox-container{
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.project-box {
+    width:100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(40, 21, 207); */
+    background-size:cover;
+    background-repeat: no-repeat;
+    background: inherit; 
+    filter: blur(2px);
+  
+}
+.project-box:hover{
+   background: inherit; 
+   filter: blur(0px);
+   transition: filter 0.3s ease;
+   background-size: cover;
+}
+.project-box:hover .projectbox-info{
+    border: 2px solid white;
+    justify-content: center;
+}
+.projectbox-info{
+    width: 95%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+   
+    font-family: sans-serif;
+    color: white;
+    gap: 2%;
+    /* background-color: burlywood; */
+}
+.projectbox-info h3{
+    font-size: 25px;
+}
+.projectbox-info p{
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+/* suppliers */
+
+.suppliers-container{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    /* background-color: aqua; */
+}
+.suppliers-container h2{
+    font-family: sans-serif;
+    font-size: 42px;
+    font-weight: bolder;
+}
+.suppliers-combany{
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* facts */
+
+.factpage-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Access-images/facts.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: aquamarine; 
+    gap: 10%;
+}
+.factpage-container h2{
+    font-size: 44px;
+    font-family: sans-serif;
+    color: white;
+}
+.fact-container{
+    width: 100%;
+    height: 30%;
+    /* background-color: aqua;   */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fact {
+    text-align: center;
+    color: white;
+}
+.fact h3 {
+    font-size: 32px;
+    margin: 10px 0;
+    color: white;
+    font-family: sans-serif;
+}
+
+
+.fact p {
+    font-size: 1.1em;
+    color: #d3d3d3;
+}
+
+
+/* estimate */
+
+.estimate-container{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5%;
+    background-color: rgb(45,42,99);
+    font-family: sans-serif;
+    color: whitesmoke;
+    font-size: 30px;
+}
+.estimate-container button{
+    width: 18%;
+    height: 15%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* footer */
+
+.footer {
+   width: 100%;
+   height: 60vh;
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   background-color: black;
+}
+
+.footer-content {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: sans-serif;
+    background-color:black;
+}
+.footer-content img{
+    width: 25%;
+}
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 4%;
+    margin-top: 3%;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.footer-section ul {
+    list-style: none;
+   
+}
+
+
+.footer-section ul li a {
+    color:rgb(45,42,99);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.footer-section ul li {
+    margin-top: 6%;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info p {
+    margin-bottom: 10%;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+.contact-info h3{
+    margin-top: 2%;
+    margin-bottom: 15%;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #444;
+    background-color: black;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+/* ...........responsive................. */
+
+
+
+@media (max-width:1025px){
+
+/* nav */
+
+.contact-item{
+    font-size: 12px;
+}
+.nav-menu button{
+    height: 60%;
+    font-size: 12px;
+}
+/* about */
+
+.about-content p{
+    font-size: 17px;
+}
+
+/* product */
+
+.product-info p{
+    font-size: 22px;
+  
+}
+.product-info span{
+    font-size: 16px;
+}
+
+/* form */
+.form-container form h2{
+    font-size: 30px;
+    margin-right: 40%;
+}
+
+/* project */
+
+.projectpage-container .title{
+    font-size: 30px;
+}
+
+/* suppliers */
+
+.suppliers-combany img{
+    width: 20%;
+}
+
+/* estimate */
+
+.estimate-container{
+    font-size: 24px;
+}
+.estimate-container button{
+    width: 25%;
+    font-size: 14px;
+}
+}
+
+
+/* .............tablet.................... */
+
+@media (max-width:768px){
+    .web-container{
+        height: auto;
+    }
+
+  /* nav */
+
+.navbar-container{
+    height: 120px;
+}
+.contact-item{
+    font-size: 8px;
+}
+.contact-item img{
+    width: 15%;
+}
+.nav-menu button{
+    width: 15%;
+    height: 60%;
+    font-size: 10px;
+}
+.nav-links {
+     font-size: 12px;
+}
+
+/* banner */
+
+.banner-container{
+    height: auto;
+}
+.slide-content h1{
+    font-size: 40px;
+    margin-top: 20%;
+}
+
+.slide-content p{
+    font-size: 25px;
+    margin-bottom: 10%;
+}
+
+/* about */
+
+.about-container{
+    height: auto;
+}
+.about-content h2{
+    font-size: 35px;
+    margin-top: 10%;
+}
+.about-content p{
+    font-size: 12px;
+    margin-top: 3%;
+}
+.about-content button{
+     width: 25%;
+     height: 30%;
+     font-size: 12px;
+    margin-top: 5%; 
+    padding: 1%;
+}
+.about-box{
+    margin-top: 4%;
+    border-radius: 15px;
+    margin-bottom: 50%;
+}
+.about-imagesection img{
+
+    width: 80%;
+    height: 100%;
+    /* margin-top: 20%; */
+}
+
+ /* product */
+
+ .product-container{
+    height:auto;
+    background-size: cover;  
+}
+.product-title{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+ .productcard-container {
+    grid-template-columns: repeat(2, 1fr);
+   
+}
+
+/* form */
+
+.formpage-container{
+    height: auto;
+}
+.form-image img{
+    width: 250px;
+    height: 350px;
+    margin-top: 8%;
+}
+.form-container form h2{
+    font-size: 24px;
+    margin-top: 20%;
+    margin-right: 30%;
+}
+.input-name{
+    margin-top: 5%;
+}
+.input-mail{
+    margin-top: 5%;
+}
+.message textarea{
+    margin-top: 5%;
+}
+.message button{
+    margin-top: 8%;
+    padding: 2%;
+}
+
+/* project */
+.projectpage-container .title{
+    font-size: 28px;
+}
+
+.Projectbox-container{
+    grid-template-columns: repeat(2, 1fr);
+   
+}
+
+/* estimate */
+
+.estimate-container{
+    font-size: 20px;
+}
+}
+
+/* .........mobile-L.......... */
+
+@media (max-width:426px){
+
+.web-container{
+    width: 100vw;
+}
+.navbar-container{
+    height: 50px;
+    background-color: whitesmoke;
+}
+.menu-logo{
+    display: block;
+    margin-left: 80%;
+    margin-top: 3%;
+}
+.logo-section img{
+    width: 90%;
+    margin-top: 3%;
+}
+.nav-info{
+    border: none;
+}
+.contact-item {
+    display: none;
+}
+.nav-menu{
+    display: none;
+}
+
+
+/* banner */
+
+.slide-content h1{
+    font-size: 25px;
+}
+.slide-content p{
+    font-size: 16px;
+}
+
+/* about */
+
+.about-container{
+    display: flex;
+    flex-direction: column;
+}
+.about-content{
+    width: 100%;
+}
+.about-box{
+    width: 80%;
+    height: 10%;
+    top: 38%;
+    position: absolute;
+}
+.about-imagesection{
+    width: 100%;
+    height: 10%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    padding-left: 5%;
+}
+
+/* product */
+
+.productcard-container{
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+.product-title{
+    font-size: 22px;
+}
+.product-card{
+    margin-left: 2%;
+}
+
+/* form */
+
+.formpage-container{
+    flex-direction: column;
+    align-items: center;
+}
+.form-image{
+    width: 100%;
+}
+.form-image img{
+    width: 80%;
+}
+.form-container {
+    width: 100%;
+}
+
+
+/* projects */
+
+.projectpage-container{
+    height: auto;
+}
+.projectpage-container .title{
+    font-size: 24px;
+    margin-top: 2%;
+}
+.Projectbox-container{
+    height: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    background-size: cover;
+}
+.project-box {
+    height: 280px;
+}
+/* 
+facts */
+
+.factpage-container {
+    height: auto;
+}
+.factpage-container h2{
+    font-size: 30px;
+    margin-bottom: 10%;
+}
+.fact img{
+    width: 25%;
+}
+.fact h3{
+    font-size: large;
+}
+.fact p{
+    font-size: 1rem;
+    margin-bottom: 10%;
+}
+
+/* estimate */
+
+.estimate-container{
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    font-size: 22px;
+}
+
+.estimate-container button{
+    width: 40%;
+    padding: 2%;
+    font-size: 12px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    margin-left: 5%;
+}
+
+
+/* foooter */
+
+.footer {
+    height: auto;
+}
+.footer-content{
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+.footer-section h3 {
+    margin-top: 8%;
+}
+.footer-bottom {
+    align-items: center;
+    font-size:12px ;
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+}
+
+/* .........mobile M.............. */
+
+@media (max-width:376px){
+
+/* banner */
+
+.slide-content h1{
+    font-size: 24px;
+}
+.slide-content p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* about */
+
+.about-box{
+    margin-top: 8%;
+}
+
+/* product */
+
+.product-info p{
+    font-size: 18px;
+}
+.product-info span{
+    font-size: 14px;
+}
+
+/* form */
+.input-name{
+    height: 30px;
+}
+.input-name input{
+    font-size: 12px;
+}
+.input-mail{
+    height: 30px;
+    
+}
+.input-mail input{
+    font-size: 12px;
+}
+.message textarea{
+    font-size: 14px;
+}
+}
+
+
+/* .........mobile-S................. */
+
+
+@media (max-width:321px){
+
+/* banner */
+
+.slide-content h1{
+     font-size: 20px;
+}
+.slide-content p{
+    font-size: 12px;
+}
+
+/* about */
+
+.about-content h2{
+    font-size: 22px;
+}
+.about-content p{
+    font-size: 10px;
+}
+
+/* product */
+
+.product-title{
+    font-size: 18px;
+}
+.product-info p{
+    font-size: 14px;
+}
+.product-info span{
+    font-size: 12px;
+}
+
+/* form */
+
+.form-container form h2{
+    font-size: 18px;
+}
+.message button{
+   font-size: 12px;
+}
+
+.estimate-container h2{
+    font-size: 16px;
+
+}
+/* footer */
+
+.footer-bottom {
+    font-size: 10px;
+    
+}
+
+}
+
+
+
+</style>
+
+</head>
+<body>
+<div class="web-container">
+
+    <!-- nav-bar -->
+    <div class="navbar-container">
+        <div class="nav-info">
+          <div class="logo-section">
+            <img src="Access-images/logo.png" alt="">
+          </div>
+          <div class="nav-contact-section">
+            <img class="menu-logo" src="Access-images/icons8-menu-24.png" alt="">
+            <div class="contact-item">
+              <img src="Access-images/icons8-location-24.png" alt="">
+              <div>
+                <h4>Address</h4>
+                <p>SHARJAH, UAE</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <img src="Access-images/icons8-clock-48 (1).png" alt="">
+              <div>
+                <h4>Work Time</h4>
+                <p>Office hours - 9 am to 4 pm</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <img src="Access-images/icons8-phone-64.png" alt="">
+              <div>
+                <h4>Call us</h4>
+                <p>+971 6 54 53 163</p>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+        <div class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#products">PRODUCTS</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#blog">BLOG</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <button>Request Quote</button>
+
+        </div>
+    </div>
+
+
+    <!-- banner -->
+    <div class="banner-container">
+        <div class="slide slide1">
+            <div class="slide-content">
+              <h1>Welcome to Access Floor <br>Building Material & Electrical <br>Trading LLC</h1>
+              <p>We provide all kinds of commercial flooring solutions,<br>
+              We make it a prioroty to offer flexible services</p>
+            </div>
+        </div>
+        <div class="slide slide2">
+            <div class="slide-content">
+              <h1>Welcome to Access Floor <br>Building Material & Electrical <br>Trading LLC</h1>
+              <p>We provide all kinds of commercial flooring solutions,<br>
+              We make it a prioroty to offer flexible services</p>
+            </div>
+        </div>
+        <div class="slide slide3">
+            <div class="slide-content">
+              <h1>Welcome to Access Floor <br>Building Material & Electrical <br>Trading LLC</h1>
+              <p>We provide all kinds of commercial flooring solutions,<br>
+              We make it a prioroty to offer flexible services</p>
+            </div>
+        </div>
+
+    
+    </div>
+    
+    <!-- about -->
+
+    <div class="about-container">
+        <div class="about-content">
+           <h2>Friendly expertise & <br>Unrivaled service</h2>
+
+           <p>Access Floors Bldg. Mat. & Elect. Trdg. L.LC, founded in 2008 <br>
+            by Managing Director Ramesh N Shetty, has successfully <br>
+            completed large-scale raised access flooring projects, meeting <br>
+            tight deadlines and achieving high customer satisfaction <br>
+            through quality control and reputable suppliers.</p>
+
+            <p>The company has expanded its product portfolio to include <br>
+            High-Pressure Laminate Finished Raised Flooring, Office <br>
+            Carpet, and various marble and ceramic finishes Raised <br>Floorings</p>
+
+            <button>Read More</button>
+           
+            <div class="about-box">
+              <div class="aboutbox-content">
+                <h2>15</h2>
+                <p>Awards</p>
+              </div>
+              <div class="aboutbox-content">
+                <h2>100+</h2>
+                <p>Clients</p>
+              </div>
+              <div class="aboutbox-content">
+                <h2>200+</h2>
+                <p>Projects</p>
+              </div>
+            </div>
+        </div> 
+        <div class="about-imagesection">
+          <img src="Access-images/about-section_11zon.png" alt="">
+        </div>
+    </div>
+
+    <!-- product -->
+    <div class="product-container">
+      <div class="product-title">
+        <h2>Our Products</h2>
+      </div>
+           
+<div class="productcard-container">
+  <div class="product-card">
+      <img src="Access-images/product2.jpg" alt="Bare Finish Panels" class="product-image">
+      <div class="product-info">
+        <p>Product Name</p>
+        <span>Explore our Collections and find the one most suited for your project.</span>
+      </div>
+  </div>
+  <div class="product-card">
+      <img src="Access-images/product1.jpg" alt="Product 2" class="product-image">
+      <div class="product-info">
+        <p>Product Name</p>
+        <span>Explore our Collections and find the one most suited for your project.</span>
+      </div>
+  </div>
+  <div class="product-card">
+      <img src="Access-images/product5.jpg" alt="Product 3" class="product-image">
+      <div class="product-info">
+        <p>Product Name</p>
+        <span>Explore our Collections and find the one most suited for your project.</span>
+      </div>
+  </div>
+  <div class="product-card">
+      <img src="Access-images/product 3.jpg" alt="Product 4" class="product-image">
+      <div class="product-info">
+          <p>Product Name</p>
+          <span>Explore our Collections and find the one most suited for your project.</span>
+      </div>
+  </div>
+  <div class="product-card">
+      <img src="Access-images/product6.jpg" alt="Product 5" class="product-image">
+      <div class="product-info">
+        <p>Product Name</p>
+        <span>Explore our Collections and find the one most suited for your project.</span>
+      </div>
+  </div>
+  <div class="product-card">
+      <img src="Access-images/product 4.jpg" alt="Product 6" class="product-image">
+      <div class="product-info">
+        <p>Product Name</p>
+        <span>Explore our Collections and find the one most suited for your project.</span>
+      </div>
+  </div>
+</div>
+</div>
+
+<!-- FORM -->
+
+  <div class="formpage-container">
+    <div class="form-image">
+      <img src="Access-images/form-image_11zon.png" alt="">
+    </div> 
+    <div class="form-container">
+      <form action="#">
+        <h2>Get a Free Quote</h2>
+        <div class="input-name">
+          <input type="text" placeholder="First name">
+          <input type="text" placeholder="Last name">
+        </div>
+        <div class="input-mail">   
+  
+          <input type="email" placeholder="Email">
+          <input type="tel" placeholder="Phone">   
+  
+        </div>
+        <div class="message">
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">Send</button>
+        </div>
+       
+      </form>
+    </div>
+  </div> 
+
+  <!-- projects -->
+   
+<div class="projectpage-container">
+    <div class="title">
+      <h1>Projects</h1>
+    </div>
+ 
+  <div class="Projectbox-container">
+      <div class="project-box">
+          <div class="projectbox-info">
+              <h3>Project 1</h3>
+              <p>Project Details</p>
+          </div>
+      </div>
+      <div class="project-box">
+          <div class="projectbox-info">
+              <h3>Project 2</h3>
+              <p>Project Details</p>
+          </div>
+      </div>
+      <div class="project-box">
+          <div class="projectbox-info">
+              <h3>Project 3</h3>
+              <p>Project Details</p>
+          </div>
+      </div>
+      <div class="project-box">
+          <div class="projectbox-info">
+              <h3>Project 4</h3>
+              <p>Project Details</p>
+          </div>
+      </div>
+      <div class="project-box">
+          <div class="projectbox-info">
+              <h3>Project 5</h3>
+              <p>Project Details</p>
+          </div>
+      </div>
+      <div class="project-box">
+          <div class="projectbox-info">
+              <h3>Project 6</h3>
+              <p>Project Details</p>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- suppilers -->
+
+ <div class="suppliers-container">
+  <h2>Our Suppliers</h2>
+    <div class="suppliers-combany">
+    <img src="Access-images/supplier1.png" alt="">
+    <img src="Access-images/supplier2.png" alt="">
+    <img src="Access-images/supplier3.png" alt="">
+    <img src="Access-images/suppplier4.png" alt=""> 
+  </div>
+</div>
+
+<!-- facts -->
+
+<div class="factpage-container">
+  <h2>Intresting Facts</h2>
+  <div class="fact-container">
+    <div class="fact">
+       <img src="Access-images/icons8-trophy-48.png" alt="">
+      <h3>15</h3>
+      <p>Awards</p>
+  </div>
+  
+
+  <div class="fact">
+       <img src="Access-images/icons8-space-shuttle-64.png" alt="">
+      <h3>1024</h3>
+      <p>Projects</p>
+  </div>
+  
+
+  <div class="fact">
+      <img src="Access-images/icons8-group-50.png" alt="">
+      <h3>1024</h3>
+      <p>Happy clients</p>
+  </div>
+  
+
+  <div class="fact">
+       <img src="Access-images/icons8-uptime-68.png" alt="">
+      <h3>99</h3>
+      <p>Up Time</p>
+  </div>
+  </div>
+
+</div>
+
+
+<!-- Estimate -->
+ 
+<div class="estimate-container">
+  <h2>NEED HELP? GET YOUR <br>RENOVATION STARTED TODAY</h2>
+  <button>SCHEDULE AN ESTIMATE</button>
+</div>
+
+<!-- footer -->
+
+ <footer class="footer">
+  <div class="footer-content">
+    <img src="Access-images/logong" alt="logo"> 
+      <div class="footer-section">
+          <h3>QUICK LINKS</h3>
+          <ul>    
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>OUR PRODUCTS</h3>
+          <ul>
+              <li><a href="#">Steel Cement Encapsulated</a></li>
+              <li><a href="#">Calcium Sulphate</a></li>
+              <li><a href="#">Office Carpet</a></li>
+              <li><a href="#">Woodcore</a></li>
+          </ul>
+      </div>
+      <div class="footer-section contact-info">
+          <h3>CONTACT</h3>
+          <p><i class="fas fa-phone"></i> +97165453163</p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:example@example.com">Click To Email</a></p>
+          <p><i class="fas fa-map-marker-alt"></i>SHARJAH,UAE</p>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; Copyright 2024 - Hand Coded By  HJ Web Designs</p>
+  </div>
+</footer>
+
+</div>
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Array of background images for each project box
+    const backgrounds = [
+        'url("Access-images/project1.jpeg")',
+        'url("Access-images/project2.jpeg")',
+        'url("Access-images/project3.jpeg")',
+        'url("Access-images/project4.jpeg")',
+        'url("Access-images/project5.jpeg")',
+        'url("Access-images/project6.jpeg")'
+    ];
+
+    // Select all elements with the class 'project-box'
+    const projectBoxes = document.querySelectorAll('.project-box');
+
+    // Loop through each project box and set the background image from the array
+    projectBoxes.forEach((box, index) => {
+        if (backgrounds[index]) { // Check if there's a background image for this box
+            box.style.backgroundImage = backgrounds[index];
+        }
+    });
+});
+
+
+
+
+
+
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? "flex" : "none";
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length; // Loop back to first slide
+    showSlide(currentSlide);
+}
+
+// Show the first slide initially
+showSlide(currentSlide);
+
+// Automatically switch slides every 5 seconds
+setInterval(nextSlide, 5000);
+
+</script>
+</body>
+</html>
