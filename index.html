@@ -8,7 +8,7 @@
 <style>
 
 
- *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,6 +16,17 @@
 .web-container{
     width: 100%;
     height: 850vh;
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
 }
 
 /* navbar */
@@ -26,7 +37,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: aqua; */
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+    background-color: whitesmoke;
+   
 }
 .nav-info{
     width: 90%;
@@ -132,7 +147,7 @@
 .banner-container{
     width: 100%;
     height: 100vh;
-    /* background-color: aqua; */
+    background-color: aqua;
 }
 
 .slide {
@@ -144,6 +159,7 @@
     gap: 50%;
     
 }
+
 .slide-content h1{
     font-family: sans-serif;
     font-size: 60px;
@@ -188,7 +204,10 @@
    height: 120vh;
    display: flex;
    position: relative;
-   /* background-color: aqua; */
+   /* background-color: whitesmoke; */
+   animation: appear  linear;
+   animation-timeline: view();
+   animation-range: entry 5%;
 }
 .about-content{
     width: 55%;
@@ -225,13 +244,12 @@
     position: absolute;
     top: 70%;
     border-radius: 25px;
-    background-image: url(Access-images/about-box.png);
-    /* background-color: rgb(211,208,204); */
-    background-repeat: no-repeat;
+    background-color: white;
     background-size: 100vw 110vh;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
 }
 .aboutbox-content{
     width: 30%;
@@ -243,7 +261,7 @@
     text-align: center;
     /* background-color: bisque; */
     font-family: sans-serif;
-    color:whitesmoke;
+    color:black;
     gap: 2%;
 
 }
@@ -284,6 +302,9 @@
     color: white;
     padding-left: 5%;
     /* background-color: bisque; */
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 5%;
 }
 .productcard-container {
     width: 90%;
@@ -299,9 +320,17 @@
      height: 90%;
     overflow: hidden;
     display: flex;
-    flex-direction: column;     
+    flex-direction: column;
+    border-radius: 10px;     
     /* background-color: bisque; */
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 5%;
 
+}
+.product-card:hover .product-info {
+    align-items: center;
+    transition:  3s ease-out;
 }
 .product-image {
     width: 100%;
@@ -349,6 +378,9 @@
     align-items: center;
     justify-content: center;
     /* background-color: burlywood; */
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 5%;
 }
 .form-image img{
     width: 80%;
@@ -378,6 +410,9 @@
     gap: 8%;
     align-items: center;
     /* background-color: blueviolet; */
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 5%;
 }
 .form-container form h2{
     font-family: sans-serif;
@@ -439,16 +474,16 @@
     color: grey;
 }
 .message button{
-    width: 20%;
+    width: 26%;
     height: 15%;
     border-radius: 25px;
     border: none;
-    background-color: rgb(45,42,99);
     color: white;
     font-family: sans-serif;
     font-size: 18px;
     color: whitesmoke;
     font-weight:lighter;
+    background-color: rgb(45,42,99);
 }
 
 /* projects */
@@ -492,6 +527,9 @@
     background-repeat: no-repeat;
     background: inherit; 
     filter: blur(2px);
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 5%;
   
 }
 .project-box:hover{
@@ -536,6 +574,9 @@
     justify-content: center;
     gap: 10%;
     /* background-color: aqua; */
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 5%;
 }
 .suppliers-container h2{
     font-family: sans-serif;
@@ -563,11 +604,15 @@
     background-size: cover;
     background-color: aquamarine; 
     gap: 10%;
+
 }
 .factpage-container h2{
     font-size: 44px;
     font-family: sans-serif;
     color: white;
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 5%;
 }
 .fact-container{
     width: 100%;
@@ -576,8 +621,26 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 5%;
 }
-
+.fact-1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: aqua; */
+}
+.fact-2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: aqua; */
+}
 .fact {
     text-align: center;
     color: white;
@@ -703,11 +766,8 @@
 
 
 
+/* .................responsive................... */
 
-
-
-
-/* ...........responsive................. */
 
 
 
@@ -798,7 +858,8 @@
 /* banner */
 
 .banner-container{
-    height: auto;
+    height: 95vh;
+    /* align-items: center; */
 }
 .slide-content h1{
     font-size: 40px;
@@ -845,12 +906,13 @@
  /* product */
 
  .product-container{
-    height:auto;
+    height:170vh;
     background-size: cover;  
 }
 .product-title{
-    margin-top: 5%;
-    margin-bottom: 5%;
+    height: 10%;
+   margin-top: 2%;
+   margin-bottom: 2%;
 }
  .productcard-container {
     grid-template-columns: repeat(2, 1fr);
@@ -917,11 +979,11 @@
 .menu-logo{
     display: block;
     margin-left: 80%;
-    margin-top: 3%;
+    margin-top: 10%;
 }
 .logo-section img{
-    width: 90%;
-    margin-top: 3%;
+    width: 100%;
+    margin-top: 16%;
 }
 .nav-info{
     border: none;
@@ -967,16 +1029,20 @@
 }
 
 /* product */
-
+.product-container{
+    height: 360vh;
+}
 .productcard-container{
     grid-template-columns: repeat(1, 1fr);
     align-items: center;
     justify-content: center;
 }
 .product-title{
-    font-size: 22px;
+    height:5%;
+    font-size:px;
 }
 .product-card{
+    height: 300px;
     margin-left: 2%;
 }
 
@@ -995,8 +1061,31 @@
 .form-container {
     width: 100%;
 }
-
-
+.input-name{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* background-color: azure; */
+}
+.input-name input{
+    width: 90%;
+    height: 50px;
+    margin-top: 5%;
+}
+.input-mail{
+    display: flex;
+    flex-direction: column;
+}
+.input-mail input{
+    width: 90%;
+    height: 50px;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+.message textarea{
+    height: 120px;
+    padding: 4%;
+}
 /* projects */
 
 .projectpage-container{
@@ -1012,20 +1101,48 @@
     background-size: cover;
 }
 .project-box {
-    height: 280px;
+    height: 300px;
+}
+.project-box:hover{
+   background: inherit; 
+   filter: blur(0px);
+   transition: filter 0.3s ease;
+   background-size: cover;
+}
+.project-box:hover .projectbox-info{
+    border: 2px solid white;
+    justify-content: center;
+}
+.footer-content img{
+    width:45%;
+    margin-top: 5%;
+    
 }
 /* 
 facts */
 
 .factpage-container {
-    height: auto;
+    height: 100vh;
+    
 }
 .factpage-container h2{
     font-size: 30px;
     margin-bottom: 10%;
 }
+.fact-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+.fact-1{
+    width: 100%;
+    margin-bottom: 5%;
+}
+.fact-2{
+    width: 100%;
+}
 .fact img{
-    width: 25%;
+    width: 42%;
 }
 .fact h3{
     font-size: large;
@@ -1038,11 +1155,14 @@ facts */
 /* estimate */
 
 .estimate-container{
-    height: auto;
+    height: 50vh;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-    font-size: 22px;
+    font-size: 16px;
+    padding-top: 5%;
+    padding-left: 5%;
+    font-size: 15px;
 }
 
 .estimate-container button{
@@ -1073,6 +1193,7 @@ facts */
     font-size:12px ;
     margin-top: 8%;
     margin-bottom: 5%;
+    padding-top: 5%;
 }
 }
 
@@ -1106,24 +1227,27 @@ facts */
 }
 
 /* form */
-.input-name{
-    height: 30px;
-}
+
 .input-name input{
-    font-size: 12px;
+    width: 90%;
+    height: 50px;
+    margin-top: 5%;
 }
 .input-mail{
-    height: 30px;
-    
+    display: flex;
+    flex-direction: column;
 }
 .input-mail input{
-    font-size: 12px;
+    width: 90%;
+    height: 50px;
+    margin-top: 1%;
+    margin-bottom: 5%;
 }
 .message textarea{
-    font-size: 14px;
+    height: 120px;
+    padding: 4%;
 }
 }
-
 
 /* .........mobile-S................. */
 
@@ -1151,7 +1275,7 @@ facts */
 /* product */
 
 .product-title{
-    font-size: 18px;
+    font-size: 22px;
 }
 .product-info p{
     font-size: 14px;
@@ -1184,10 +1308,8 @@ facts */
 
 
 
-</style>
 
-</head>
-<body>
+</style>
 <div class="web-container">
 
     <!-- nav-bar -->
@@ -1284,15 +1406,15 @@ facts */
            
             <div class="about-box">
               <div class="aboutbox-content">
-                <h2>15</h2>
+                <h2 class="count" data-target="15">0</h2>
                 <p>Awards</p>
               </div>
               <div class="aboutbox-content">
-                <h2>100+</h2>
+                <h2 class="count" data-target="100">0</h2>
                 <p>Clients</p>
               </div>
               <div class="aboutbox-content">
-                <h2>200+</h2>
+                <h2 class="count" data-target="200">0</h2>
                 <p>Projects</p>
               </div>
             </div>
@@ -1445,32 +1567,38 @@ facts */
 <div class="factpage-container">
   <h2>Intresting Facts</h2>
   <div class="fact-container">
+    <div class="fact-1">
+
+      <div class="fact">
+        <img src="Access-images/icons8-trophy-48.png" alt="">
+        <h3 class="count" data-target="15">0</h3>
+       <p>Awards</p>
+   </div>
+   
+ 
+   <div class="fact">
+        <img src="Access-images/icons8-space-shuttle-64.png" alt="">
+        <h3 class="count" data-target="1024">0</h3>
+       <p>Projects</p>
+   </div>
+    </div>
+
+   <div class="fact-2">
     <div class="fact">
-       <img src="Access-images/icons8-trophy-48.png" alt="">
-      <h3>15</h3>
-      <p>Awards</p>
-  </div>
-  
-
-  <div class="fact">
-       <img src="Access-images/icons8-space-shuttle-64.png" alt="">
-      <h3>1024</h3>
-      <p>Projects</p>
-  </div>
-  
-
-  <div class="fact">
       <img src="Access-images/icons8-group-50.png" alt="">
-      <h3>1024</h3>
+      <h3 class="count" data-target="1024">0</h3>
       <p>Happy clients</p>
   </div>
   
 
   <div class="fact">
        <img src="Access-images/icons8-uptime-68.png" alt="">
-      <h3>99</h3>
+       <h3 class="count" data-target="99">0</h3>
       <p>Up Time</p>
   </div>
+   </div>
+
+
   </div>
 
 </div>
@@ -1487,7 +1615,7 @@ facts */
 
  <footer class="footer">
   <div class="footer-content">
-    <img src="Access-images/logong" alt="logo"> 
+    <img src="Access-images/acess-whitelogo.png" alt="logo"> 
       <div class="footer-section">
           <h3>QUICK LINKS</h3>
           <ul>    
@@ -1520,8 +1648,7 @@ facts */
 
 </div>
 <script>
-
-document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
     // Array of background images for each project box
     const backgrounds = [
         'url("Access-images/project1.jpeg")',
@@ -1568,6 +1695,29 @@ showSlide(currentSlide);
 // Automatically switch slides every 5 seconds
 setInterval(nextSlide, 5000);
 
+
+
+const counters = document.querySelectorAll('.count');
+const animationDuration = 2000; // Total animation duration in milliseconds
+
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+
+    // Calculate increment to ensure all counters finish at the same time
+    const increment = target / (animationDuration / 20); // 20ms intervals
+
+    if (count < target) {
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(updateCount, 20); // 20ms for smooth animation
+    } else {
+      counter.innerText = target; // Ensure the final value is accurate
+    }
+  };
+
+  updateCount();
+});
 </script>
 </body>
 </html>
