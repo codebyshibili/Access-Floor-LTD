@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Access-floor</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<style>
-
-
-*{
+    <title>Access-Floor</title>
+    <style>
+     *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 .web-container{
     width: 100%;
-    height: 850vh;
+    height: auto;
 }
 @keyframes appear{
     from{
@@ -28,258 +25,224 @@
         scale: 1;
     }
 }
+.nav-banner-container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(64, 67, 66);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(Access-images/banner\ bg_11zon.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
 
-/* navbar */
+/* ..............navbar.................. */
+
 
 .navbar-container{
     width: 100%;
-    height: 170px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: sticky;
-    top: 0%;
-    z-index: 1;
-    background-color: whitesmoke;
-   
-}
-.nav-info{
-    width: 90%;
-    height: 60%;
+    height: 12%;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid rgb(45,42,99);
-    /* background-color: bisque;     */
+    /* background-color: bisque; */
 }
-.logo-section{
-    width: 20%;
+.navlogo-section{
+    width: 15%;
     height: 100%;
     display: flex;
-    align-items: center ;
-    /* justify-content: center; */
-    /* background-color: blue; */
+    align-items: center;
+    justify-content: center;
+    /* background-color: blueviolet; */
 }
-.logo-section img{
-    width: 60%;
+.navlogo-section img{
+    width: 70%;
 }
-
-.nav-contact-section{
+.menu-icon{
+    width: 25px;
+    height: 25px;
+    display: none;
+}
+.nav-menu{
     width: 70%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    /* background-color: cornflowerblue; */
-   
+    justify-content: space-evenly;
+    /* background-color: chartreuse; */
 }
-.menu-logo{
-    display: none;
-}
-
-  .contact-item {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    color: #333;
+.nav-menu P{
     font-size: 16px;
-    gap: 2%;
     font-family: sans-serif;
-    /* background-color: aqua; */
-  }
-
-  .contact-item img {
-    width: 30px;
-    margin-bottom: 5%;
-
-  }
-
-  .contact-item h4 {
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  .contact-item p {
-    color: #666;
-  }
-.nav-menu{
-    width: 90%;
-    height: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* background-color: blueviolet; */
+    font-weight: 500;
+    color: whitesmoke;
 }
-.nav-links {
-    width: 60%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    /* background-color: aqua; */
-    font-family: sans-serif;
+.nav-menu P:hover{
+    color:#f26851;
 }
 
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-}
-.nav-menu button{
-    width: 12%;
-    height: 70%;
-    border-radius: 25px;
-    font-family: sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    border: none;
-    margin-right: 2%;
-    background-color: rgb(45,42,99);
-}
-
-/* banner */
+/* .................banner............... */
 
 .banner-container{
-    width: 100%;
-    height: 100vh;
-    background-color: aqua;
-}
-
-.slide {
-    width: 100%;
-    height: 100%;
+    width: 100%; 
+    height: 88%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 50%;
-    
+    padding-left: 4%;
+    /* background-color: burlywood; */
 }
-
-.slide-content h1{
-    font-family: sans-serif;
-    font-size: 60px;
+.banner-container h1{
+    font-size: 48px;
+    font-weight: bolder;
     color: white;
-    padding-left: 6%;
-    margin-top: 4%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 5%;
 }
-.slide-content p{
-    font-size: 30px;
-    font-weight: 200;
-    font-family: sans-serif;
-    color:whitesmoke;
-    padding-left: 6%;
+.banner-container p{
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
     margin-top: 2%;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+}
+.banner-container button{
+    width: 220px;
+    height: 50px;
+    font-size: larger;
+    margin-top: 2%;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid whitesmoke ;
+    background-color:#f26851;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-.slide1 {
-    background-image: url('Access-images/banner bg_11zon.jpg'); 
-    background-size: cover;
-    background-position: center;
-}
-
-.slide2 {
-    background-image: url('Access-images/form-image_11zon.png'); 
-    background-size: cover;
-    background-position: center;
-}
-
-.slide3 {
-    background-image: url('Access-images/about-section_11zon.png'); 
-    background-size: cover;
-    background-position: center;
-}
-
-
-
-
-/* about */
+/* ................about............................ */
 
 .about-container{
-   width: 100%;
-   height: 120vh;
-   display: flex;
-   position: relative;
-   /* background-color: whitesmoke; */
-   animation: appear  linear;
-   animation-timeline: view();
-   animation-range: entry 5%;
-}
-.about-content{
-    width: 55%;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    background-color: white;
+ }
+ .about-content{
+     width: 55%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     /* background-color: bisque; */
+     padding-left: 5%;
+     gap: 3%;
+     animation: appear  linear;
+     animation-timeline: view();
+     animation-range: entry 5%;
+ }
+ .about-content h2{
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-size: 40px;
+ 
+ }
+ .about-content p{
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     font-size: 22px;
+     font-weight: 400;
+
+ }
+ .about-content button{
+     width: 200px;
+     height: 50px;
+     border: none;
+     border-radius: 5px ;
+     color: white;
+     font-family: sans-serif;
+     font-size: 16px;
+     background-color:#f26851;
+ }
+
+ .about-imagesection{
+     width: 50%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     /* background-color: brown; */
+ }
+ .about-imagesection img{
+     width: 550px;
+     height: 650px;
+     border-radius: 25px;
+     animation: appear  linear;
+     animation-timeline: view();
+     animation-range: entry 5%;
+ }
+
+/* .................. details.................. */
+
+.detail-container{
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* background-color: bisque; */
-    padding-left: 5%;
+    align-items: center;
+    background-color: whitesmoke;
     gap: 3%;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
-.about-content h2{
-    font-family: sans-serif;
-    font-size: 40px;
-}
-.about-content p{
-    font-family: sans-serif;
-    font-size: 20px;
-}
-.about-content button{
-    width: 25%;
-    height: 5%;
-    border: none;
-    border-radius: 25px;
-    color: white;
-    font-family: sans-serif;
-    font-size: 16px;
-    margin-bottom: 25%;
-    background-color: rgb(45,42,99);
-}
-.about-box{
-    width: 55%;
-    height: 20%;
-    position: absolute;
-    top: 70%;
-    border-radius: 25px;
-    background-color: white;
-    background-size: 100vw 110vh;
-    overflow: hidden;
+.detail-title{
+    width: 90%;
+    height:10%;
     display: flex;
-    justify-content: space-between;
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    font-size: 28px;
+    font-weight: 500;
+    color: #f26851;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color: aqua; */
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 10%;
 }
-.aboutbox-content{
-    width: 30%;
-    height: 100%;
+.detailcard-container{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: rgb(42, 51, 216); */
+}
+.detail-card{
+    width: 25%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    /* background-color: bisque; */
-    font-family: sans-serif;
-    color:black;
     gap: 2%;
-
+    background-color: rgb(45,42,99);
+    color: whitesmoke;
+    /* border-radius: 50%; */
 }
-.about-imagesection{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    /* background-color: brown; */
+.detail-card h2{
+    font-size: 82px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 5%;
 }
-.about-imagesection img{
-    width: 80%;
-    height: 73%;
-    border-radius: 25px;
-    margin-top: 10%;
+.detail-card p{
+    font-size: 32px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 20%;
 }
 
-
-/* product */
+/* ....................product................................. */
 
 .product-container{
     width: 100%;
@@ -297,14 +260,11 @@
     height: 10%;
     display: flex;
     align-items: center;
-    font-size: 32px;
-    font-family: sans-serif;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     padding-left: 5%;
-    /* background-color: bisque; */
-    animation: appear  linear;
-    animation-timeline: view();
-    animation-range: entry 5%;
+    background-color: rgb(45,42,99);
 }
 .productcard-container {
     width: 90%;
@@ -362,140 +322,67 @@
     color: grey;
 }
 
-
-/* FORM */
-
-.formpage-container{
+/* ................why.......................... */
+.whypage-container{
     width: 100%;
-    height: 110vh;
-    display: flex;
-    /* background-color: aqua; */
-}
-.form-image{
-    width: 40%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: burlywood; */
-    animation: appear  linear;
-    animation-timeline: view();
-    animation-range: entry 5%;
-}
-.form-image img{
-    width: 80%;
-    height: 80%;
-    border-radius: 25px;
-}
-.form-image img:hover{
-    transition: box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.form-image img:hover:hover{
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-.form-container {
-    width: 60%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: blue; */
-}
-.form-container form{
-    width: 80%;
-    height: 60%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 8%;
     align-items: center;
-    /* background-color: blueviolet; */
-    animation: appear  linear;
-    animation-timeline: view();
-    animation-range: entry 5%;
+    /* justify-content: center; */
+    background-color:whitesmoke;
 }
-.form-container form h2{
-    font-family: sans-serif;
-    font-size: 36px;
-    margin-right: 45%;
-}
-.input-name{
+.why-title{
     width: 100%;
-    height: 10%;
+    height: 20%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    /* background-color: aqua; */
-    color: grey;
+    padding-left: 5%;
+    font-size: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(45,42,99);
+    /* background-color: rgb(45,42,99); */
 }
-.input-name input{
-    width: 42%;
-    height: 100%;
-    border-radius: 25px;
-    border: 1px solid grey;
-    font-family: sans-serif;
-    font-size: 18px;
-    text-align: center;
-}
-.input-mail{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: grey;
- 
-}
-.input-mail input{
-    width:42%;
-    height: 100%;
-    border-radius: 25px;
-    border: 1px solid grey;
-    font-family: sans-serif;
-    font-size: 18px;
-    text-align: center;
-}
-.message{
+.whycard-container{
     width: 90%;
-    height: 60%;
-    /* background-color: aqua; */
+    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* background-color: bisque; */
     display: flex;
-    gap: 10%;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+.whycard{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    gap: 5%;
+    border: 2px solid #f26851;
+    background-color: white;
+    border-radius: 5px;
 }
-.message textarea{
-    width: 100%;
-    height: 70%;
-    border-radius: 25px;
-    border: 1px solid grey;
-    font-family: sans-serif;
-    font-size: 18px;
-    padding: 3%;
-    color: grey;
-}
-.message button{
-    width: 26%;
-    height: 15%;
-    border-radius: 25px;
-    border: none;
-    color: white;
-    font-family: sans-serif;
-    font-size: 18px;
-    color: whitesmoke;
-    font-weight:lighter;
-    background-color: rgb(45,42,99);
-}
+.whycard img{
+    width: 60%;
 
-/* projects */
+}
+.whycard h3{
+    font-size:24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* ................projects............ */
 
 
 .projectpage-container{
     width: 100%;
-    height: 160vh;
+    height: 150vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: aqua; */
+    /* background-color:rgb(45,42,99) */
 }
 .projectpage-container .title{
     width: 100%;
@@ -504,8 +391,9 @@
     align-items: center;
     padding-left: 4%;
     font-size: 32px;
-    font-family: sans-serif;
-    /* background: chartreuse; */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(45,42,99);
 }
 
 
@@ -563,103 +451,38 @@
     color: whitesmoke;
 }
 
-/* suppliers */
+/* ................supliers................ */
 
 .suppliers-container{
     width: 100%;
-    height: 50vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10%;
-    /* background-color: aqua; */
-    animation: appear  linear;
-    animation-timeline: view();
-    animation-range: entry 5%;
+    background-color: whitesmoke;
 }
 .suppliers-container h2{
-    font-family: sans-serif;
-    font-size: 42px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 56px;
     font-weight: bolder;
+    color: rgb(45,42,99);
+    /* text-decoration: underline; */
 }
 .suppliers-combany{
     display: flex;
     gap: 5%;
     align-items: center;
     justify-content: center;
-}
-
-/* facts */
-
-.factpage-container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(Access-images/facts.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: aquamarine; 
-    gap: 10%;
-
-}
-.factpage-container h2{
-    font-size: 44px;
-    font-family: sans-serif;
-    color: white;
     animation: appear  linear;
     animation-timeline: view();
     animation-range: entry 5%;
 }
-.fact-container{
-    width: 100%;
-    height: 30%;
-    /* background-color: aqua;   */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    animation: appear  linear;
-    animation-timeline: view();
-    animation-range: entry 5%;
-}
-.fact-1{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    /* background-color: aqua; */
-}
-.fact-2{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    /* background-color: aqua; */
-}
-.fact {
-    text-align: center;
-    color: white;
-}
-.fact h3 {
-    font-size: 32px;
-    margin: 10px 0;
-    color: white;
-    font-family: sans-serif;
-}
 
 
-.fact p {
-    font-size: 1.1em;
-    color: #d3d3d3;
-}
 
-
-/* estimate */
+/* .............estimate.................... */
 
 .estimate-container{
     width: 100%;
@@ -678,112 +501,107 @@
     height: 15%;
     font-size: 18px;
     font-weight: bold;
+    background-color: #f26851;
+    border: 2px solid white;
+    color: whitesmoke;
 }
 
-/* footer */
+/* .................footer........................... */
 
 .footer {
-   width: 100%;
-   height: 60vh;
-   align-items: center;
-   display: flex;
-   flex-direction: column;
-   background-color: black;
-}
-
-.footer-content {
-    width: 90%;
-    height: 80%;
-    display: flex;
+    width: 100%;
+    height: 60vh;
     align-items: center;
-    justify-content: space-around;
-    font-family: sans-serif;
-    background-color:black;
-}
-.footer-content img{
-    width: 25%;
-}
-.footer-section h3 {
-    font-size: 1.2em;
-    margin-bottom: 4%;
-    margin-top: 3%;
-    font-weight: bold;
-    color: whitesmoke;
-}
-
-.footer-section ul {
-    list-style: none;
-   
-}
-
-
-.footer-section ul li a {
-    color:rgb(45,42,99);
-    text-decoration: none;
-    transition: color 0.3s;
-    font-size: 1rem;
-    font-weight: bold;
-}
-.footer-section ul li {
-    margin-top: 6%;
-}
-
-.contact-info {
     display: flex;
     flex-direction: column;
-}
-
-.contact-info p {
-    margin-bottom: 10%;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-}
-.contact-info h3{
-    margin-top: 2%;
-    margin-bottom: 15%;
-}
-
-.contact-info a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer-bottom {
-    width: 90%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 2px solid #444;
     background-color: black;
-    color: whitesmoke;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 1rem;
-}
+ }
+ 
+ .footer-content {
+     width: 90%;
+     height: 80%;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     font-family: sans-serif;
+     background-color:black;
+ }
+ .footer-content img{
+     width: 25%;
+ }
+ .footer-section h3 {
+     font-size: 1.2em;
+     margin-bottom: 4%;
+     margin-top: 3%;
+     font-weight: bold;
+     color: whitesmoke;
+ }
+ 
+ .footer-section ul {
+     list-style: none;
+    
+ }
+ 
+ 
+ .footer-section ul li a {
+     color:rgb(45,42,99);
+     text-decoration: none;
+     transition: color 0.3s;
+     font-size: 1rem;
+     font-weight: bold;
+ }
+ .footer-section ul li {
+     margin-top: 5%;
+ }
+ 
+ .contact-info {
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ .contact-info p {
+     margin-bottom: 10%;
+     font-size: 1rem;
+     font-weight: bold;
+     color: white;
+ }
+ .contact-info h3{
+     margin-top: 2%;
+     margin-bottom: 15%;
+ }
+ 
+ .contact-info a {
+     color: white;
+     text-decoration: none;
+ }
+ 
+ .footer-bottom {
+     width: 90%;
+     height: 20%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-top: 2px solid #444;
+     background-color: black;
+     color: whitesmoke;
+     font-weight: bold;
+     font-family: sans-serif;
+     font-size: 1rem;
+ }
+    
 
-
-
-
-/* .................responsive................... */
-
-
-
+ /* ...............responsive................... */
+    
 
 @media (max-width:1025px){
 
 /* nav */
 
-.contact-item{
-    font-size: 12px;
-}
-.nav-menu button{
-    height: 60%;
-    font-size: 12px;
-}
 /* about */
-
+.about-imagesection img{
+    width: 400px;
+    height: 500px;
+}
 .about-content p{
     font-size: 17px;
 }
@@ -809,7 +627,14 @@
 .projectpage-container .title{
     font-size: 30px;
 }
-
+/* why */
+.whycard-container{
+    width: 95%;
+    gap: 5%;
+}
+.whycard h3{
+   font-size: 18px;
+}
 /* suppliers */
 
 .suppliers-combany img{
@@ -831,29 +656,9 @@
 /* .............tablet.................... */
 
 @media (max-width:768px){
-    .web-container{
-        height: auto;
-    }
 
   /* nav */
 
-.navbar-container{
-    height: 120px;
-}
-.contact-item{
-    font-size: 8px;
-}
-.contact-item img{
-    width: 15%;
-}
-.nav-menu button{
-    width: 15%;
-    height: 60%;
-    font-size: 10px;
-}
-.nav-links {
-     font-size: 12px;
-}
 
 /* banner */
 
@@ -861,46 +666,28 @@
     height: 95vh;
     /* align-items: center; */
 }
-.slide-content h1{
-    font-size: 40px;
-    margin-top: 20%;
-}
 
-.slide-content p{
-    font-size: 25px;
-    margin-bottom: 10%;
-}
 
 /* about */
 
-.about-container{
-    height: auto;
-}
 .about-content h2{
     font-size: 35px;
-    margin-top: 10%;
 }
 .about-content p{
-    font-size: 12px;
+    font-size: 13px;
     margin-top: 3%;
 }
 .about-content button{
-     width: 25%;
-     height: 30%;
+     width: 180px;
+     height: 50px;
      font-size: 12px;
     margin-top: 5%; 
     padding: 1%;
 }
-.about-box{
-    margin-top: 4%;
-    border-radius: 15px;
-    margin-bottom: 50%;
-}
-.about-imagesection img{
 
-    width: 80%;
-    height: 100%;
-    /* margin-top: 20%; */
+.about-imagesection img{
+    width: 300px;
+
 }
 
  /* product */
@@ -917,46 +704,27 @@
  .productcard-container {
     grid-template-columns: repeat(2, 1fr);
    
+}   
+ /* why */
+.whypage-container{
+    height: 150vh;
+
+}
+.whycard-container{
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 2%;
+}
+.whycard{
+    width: 300px;
+    height: 300px;
+    gap: 3%;
+}
+.whycard h3{
+   font-size: 18px;
 }
 
-/* form */
-
-.formpage-container{
-    height: auto;
-}
-.form-image img{
-    width: 250px;
-    height: 350px;
-    margin-top: 8%;
-}
-.form-container form h2{
-    font-size: 24px;
-    margin-top: 20%;
-    margin-right: 30%;
-}
-.input-name{
-    margin-top: 5%;
-}
-.input-mail{
-    margin-top: 5%;
-}
-.message textarea{
-    margin-top: 5%;
-}
-.message button{
-    margin-top: 8%;
-    padding: 2%;
-}
-
-/* project */
-.projectpage-container .title{
-    font-size: 28px;
-}
-
-.Projectbox-container{
-    grid-template-columns: repeat(2, 1fr);
-   
-}
 
 /* estimate */
 
@@ -969,65 +737,78 @@
 
 @media (max-width:426px){
 
-.web-container{
-    width: 100vw;
-}
-.navbar-container{
-    height: 50px;
-    background-color: whitesmoke;
-}
-.menu-logo{
+/* nav */
+.menu-icon{
     display: block;
-    margin-left: 80%;
-    margin-top: 10%;
+    margin-right: 5%;
+    align-self: center;
 }
-.logo-section img{
-    width: 100%;
-    margin-top: 16%;
+.navlogo-section{
+    width: 30%;
 }
-.nav-info{
-    border: none;
-}
-.contact-item {
-    display: none;
+.navlogo-section img{
+    width: 100px;
 }
 .nav-menu{
     display: none;
 }
 
-
 /* banner */
-
-.slide-content h1{
-    font-size: 25px;
+.banner-container{
+    gap:2% ;
 }
-.slide-content p{
-    font-size: 16px;
+.banner-container h1{
+    font-size: 28px;
+}
+.banner-container p{
+    font-size: 14px;
+}
+.banner-container button{
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
 }
 
 /* about */
-
 .about-container{
-    display: flex;
     flex-direction: column;
+    height: auto;
+    gap: 5%;
 }
 .about-content{
-    width: 100%;
-}
-.about-box{
-    width: 80%;
-    height: 10%;
-    top: 38%;
-    position: absolute;
+  width: 100%;
+  margin-top: 5%;
 }
 .about-imagesection{
     width: 100%;
-    height: 10%;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 5%;
-    padding-left: 5%;
+    padding: 5%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}   
+ .about-imagesection img {
+    width: 350px;
 }
 
+/* details */
+.detail-container{
+    gap: 8%;
+    height: 50vh;
+}
+.detailcard-container{
+    gap:5%;
+}
+.detail-card{
+    width: 200px;
+    height:200px; 
+}
+.detail-card h2{
+    font-size: 52px;
+}
+.detail-card p{
+    font-size:24px;
+}
 /* product */
 .product-container{
     height: 360vh;
@@ -1045,47 +826,30 @@
     height: 300px;
     margin-left: 2%;
 }
+/* why */
+.whypage-container{
+        height:260vh;
 
-/* form */
+}
+.whycard-container{
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    padding-left: 5%;
+}
+.why-title{
+    height: 10%;
+}
+.whycard{
+     width: 370px;
+     height: 300px;
+     gap: 3%;
+}
+.whycard h3{
+       font-size: 18px;
+}
 
-.formpage-container{
-    flex-direction: column;
-    align-items: center;
-}
-.form-image{
-    width: 100%;
-}
-.form-image img{
-    width: 80%;
-}
-.form-container {
-    width: 100%;
-}
-.input-name{
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    /* background-color: azure; */
-}
-.input-name input{
-    width: 90%;
-    height: 50px;
-    margin-top: 5%;
-}
-.input-mail{
-    display: flex;
-    flex-direction: column;
-}
-.input-mail input{
-    width: 90%;
-    height: 50px;
-    margin-top: 1%;
-    margin-bottom: 5%;
-}
-.message textarea{
-    height: 120px;
-    padding: 4%;
-}
+
 /* projects */
 
 .projectpage-container{
@@ -1118,38 +882,13 @@
     margin-top: 5%;
     
 }
-/* 
-facts */
 
-.factpage-container {
-    height: 100vh;
-    
+/* suppliers */
+.suppliers-container{
+    height: 50vh;
 }
-.factpage-container h2{
-    font-size: 30px;
-    margin-bottom: 10%;
-}
-.fact-container{
-    display: flex;
-    flex-direction: column;
-    gap: 5%;
-}
-.fact-1{
-    width: 100%;
-    margin-bottom: 5%;
-}
-.fact-2{
-    width: 100%;
-}
-.fact img{
-    width: 42%;
-}
-.fact h3{
-    font-size: large;
-}
-.fact p{
-    font-size: 1rem;
-    margin-bottom: 10%;
+.suppliers-container h2{
+    font-size: 32px;
 }
 
 /* estimate */
@@ -1202,22 +941,39 @@ facts */
 @media (max-width:376px){
 
 /* banner */
-
-.slide-content h1{
+.banner-container h1{
     font-size: 24px;
 }
-.slide-content p{
-    font-size: 14px;
-    font-weight: 400;
+.banner-container p{
+    font-size: 10px;
 }
 
 /* about */
-
-.about-box{
-    margin-top: 8%;
+.about-imagesection img{
+    width: 325px;
 }
-
+    /* details */
+.detail-container{
+    gap: 8%;
+    height: 50vh;
+}
+.detailcard-container{
+    gap:5%;
+}
+.detail-card{
+    width: 200px;
+    height:200px; 
+}
+.detail-card h2{
+    font-size: 40px;
+}
+.detail-card p{
+    font-size:18px;
+}
 /* product */
+.product-title{
+    font-size: 32px ;
+}
 
 .product-info p{
     font-size: 18px;
@@ -1226,26 +982,28 @@ facts */
     font-size: 14px;
 }
 
-/* form */
+   /* why */
+   .whypage-container{
+    height:260vh;
 
-.input-name input{
-    width: 90%;
-    height: 50px;
-    margin-top: 5%;
 }
-.input-mail{
-    display: flex;
-    flex-direction: column;
+.whycard-container{
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    /* margin-top: 2%; */
+    padding-left: 5%;
 }
-.input-mail input{
-    width: 90%;
-    height: 50px;
-    margin-top: 1%;
-    margin-bottom: 5%;
+.why-title{
+    height: 10%;
 }
-.message textarea{
-    height: 120px;
-    padding: 4%;
+.whycard{
+    width: 300px;
+    height: 300px;
+    gap: 3%;
+}
+.whycard h3{
+   font-size: 18px;
 }
 }
 
@@ -1255,21 +1013,24 @@ facts */
 @media (max-width:321px){
 
 /* banner */
-
-.slide-content h1{
-     font-size: 20px;
+.banner-container h1{
+  font-size: 21px;
 }
-.slide-content p{
-    font-size: 12px;
+.banner-container button{
+    width: 100px;
+    border: 1px solid whitesmoke;
 }
 
 /* about */
 
+.about-imagesection img{
+    width: 280px;
+}
 .about-content h2{
-    font-size: 22px;
+    font-size: 30px;
 }
 .about-content p{
-    font-size: 10px;
+    font-size: ;
 }
 
 /* product */
@@ -1306,88 +1067,37 @@ facts */
 
 }
 
-
-
-
-</style>
+    </style>
+ 
+</head>
+<body>
 <div class="web-container">
+<div class="nav-banner-container">
 
-    <!-- nav-bar -->
+    <!-- nav -->
     <div class="navbar-container">
-        <div class="nav-info">
-          <div class="logo-section">
-            <img src="Access-images/logo.png" alt="">
+          <div class="navlogo-section">
+            <img src="Access-images/acess-whitelogo.png" alt="">
           </div>
-          <div class="nav-contact-section">
-            <img class="menu-logo" src="Access-images/icons8-menu-24.png" alt="">
-            <div class="contact-item">
-              <img src="Access-images/icons8-location-24.png" alt="">
-              <div>
-                <h4>Address</h4>
-                <p>SHARJAH, UAE</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <img src="Access-images/icons8-clock-48 (1).png" alt="">
-              <div>
-                <h4>Work Time</h4>
-                <p>Office hours - 9 am to 4 pm</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <img src="Access-images/icons8-phone-64.png" alt="">
-              <div>
-                <h4>Call us</h4>
-                <p>+971 6 54 53 163</p>
-              </div>
-            </div>
-          </div>
-         
-        </div>
-        <div class="nav-menu">
-            <ul class="nav-links">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT US</a></li>
-                <li><a href="#products">PRODUCTS</a></li>
-                <li><a href="#gallery">GALLERY</a></li>
-                <li><a href="#blog">BLOG</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-            <button>Request Quote</button>
-
-        </div>
+          <img class="menu-icon" src="Access-images/icons8-menu-50.png" alt="">
+           <div class="nav-menu">
+              <p>HOME</p>
+              <p>ABOUT</p>
+              <p>PRODUCTS</p>
+              <p>GALLERY</p>
+              <p>BLOG</p>
+              <P>CONTACT</P>
+           </div>
     </div>
-
-
     <!-- banner -->
-    <div class="banner-container">
-        <div class="slide slide1">
-            <div class="slide-content">
-              <h1>Welcome to Access Floor <br>Building Material & Electrical <br>Trading LLC</h1>
-              <p>We provide all kinds of commercial flooring solutions,<br>
-              We make it a prioroty to offer flexible services</p>
-            </div>
-        </div>
-        <div class="slide slide2">
-            <div class="slide-content">
-              <h1>Welcome to Access Floor <br>Building Material & Electrical <br>Trading LLC</h1>
-              <p>We provide all kinds of commercial flooring solutions,<br>
-              We make it a prioroty to offer flexible services</p>
-            </div>
-        </div>
-        <div class="slide slide3">
-            <div class="slide-content">
-              <h1>Welcome to Access Floor <br>Building Material & Electrical <br>Trading LLC</h1>
-              <p>We provide all kinds of commercial flooring solutions,<br>
-              We make it a prioroty to offer flexible services</p>
-            </div>
-        </div>
-
-    
-    </div>
-    
+     <div class="banner-container">
+        <h1>Welcome to Access Floor <br> Building Material & Electrical <br> Trading LLC</h1>
+        <p>We provide all kinds of commercial flooring solutions,<br> We make it a prority to offer flexible services</p>
+        <button>Get Quote</button>
+     </div>
+</div>
     <!-- about -->
-
+     
     <div class="about-container">
         <div class="about-content">
            <h2>Friendly expertise & <br>Unrivaled service</h2>
@@ -1403,110 +1113,120 @@ facts */
             Carpet, and various marble and ceramic finishes Raised <br>Floorings</p>
 
             <button>Read More</button>
-           
-            <div class="about-box">
-              <div class="aboutbox-content">
-                <h2 class="count" data-target="15">0</h2>
-                <p>Awards</p>
-              </div>
-              <div class="aboutbox-content">
-                <h2 class="count" data-target="100">0</h2>
-                <p>Clients</p>
-              </div>
-              <div class="aboutbox-content">
-                <h2 class="count" data-target="200">0</h2>
-                <p>Projects</p>
-              </div>
-            </div>
         </div> 
         <div class="about-imagesection">
           <img src="Access-images/about-section_11zon.png" alt="">
         </div>
     </div>
 
+    <!-- Details -->
+     <div class="detail-container">
+        <div class="detail-title">
+            <p>US IN NUMBERS</p>
+        </div>
+        <div class="detailcard-container">
+            <div class="detail-card">
+              <h2 class="number" data-target="15">0</h2>
+                <p>Awards</p>
+             </div>
+             <div class="detail-card">
+              <h2 class="number" data-target="100">0</h2>
+                <p>Clients</p>
+             </div>
+             <div class="detail-card">
+              <h2 class="number" data-target="200">0</h2>
+                <p>Project</p> 
+             </div>
+        </div>
+     </div>
+
     <!-- product -->
     <div class="product-container">
-      <div class="product-title">
-        <h2>Our Products</h2>
-      </div>
-           
-<div class="productcard-container">
-  <div class="product-card">
-      <img src="Access-images/product2.jpg" alt="Bare Finish Panels" class="product-image">
-      <div class="product-info">
-        <p>Product Name</p>
-        <span>Explore our Collections and find the one most suited for your project.</span>
-      </div>
-  </div>
-  <div class="product-card">
-      <img src="Access-images/product1.jpg" alt="Product 2" class="product-image">
-      <div class="product-info">
-        <p>Product Name</p>
-        <span>Explore our Collections and find the one most suited for your project.</span>
-      </div>
-  </div>
-  <div class="product-card">
-      <img src="Access-images/product5.jpg" alt="Product 3" class="product-image">
-      <div class="product-info">
-        <p>Product Name</p>
-        <span>Explore our Collections and find the one most suited for your project.</span>
-      </div>
-  </div>
-  <div class="product-card">
-      <img src="Access-images/product 3.jpg" alt="Product 4" class="product-image">
-      <div class="product-info">
+        <div class="product-title">
+          <h2>Our Products</h2>
+        </div>
+             
+  <div class="productcard-container">
+    <div class="product-card">
+        <img src="Access-images/product2.jpg" alt="Bare Finish Panels" class="product-image">
+        <div class="product-info">
+          <p>AFT-TECH</p>
+          <span>Explore our Collections and find the one most suited for your project.</span>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="Access-images/product1.jpg" alt="Product 2" class="product-image">
+        <div class="product-info">
+          <p>AFT-Access Floor</p>
+          <span>Explore our Collections and find the one most suited for your project.</span>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="Access-images/product5.jpg" alt="Product 3" class="product-image">
+        <div class="product-info">
           <p>Product Name</p>
           <span>Explore our Collections and find the one most suited for your project.</span>
-      </div>
-  </div>
-  <div class="product-card">
-      <img src="Access-images/product6.jpg" alt="Product 5" class="product-image">
-      <div class="product-info">
-        <p>Product Name</p>
-        <span>Explore our Collections and find the one most suited for your project.</span>
-      </div>
-  </div>
-  <div class="product-card">
-      <img src="Access-images/product 4.jpg" alt="Product 6" class="product-image">
-      <div class="product-info">
-        <p>Product Name</p>
-        <span>Explore our Collections and find the one most suited for your project.</span>
-      </div>
-  </div>
-</div>
-</div>
-
-<!-- FORM -->
-
-  <div class="formpage-container">
-    <div class="form-image">
-      <img src="Access-images/form-image_11zon.png" alt="">
-    </div> 
-    <div class="form-container">
-      <form action="#">
-        <h2>Get a Free Quote</h2>
-        <div class="input-name">
-          <input type="text" placeholder="First name">
-          <input type="text" placeholder="Last name">
         </div>
-        <div class="input-mail">   
-  
-          <input type="email" placeholder="Email">
-          <input type="tel" placeholder="Phone">   
-  
-        </div>
-        <div class="message">
-          <textarea placeholder="Message"></textarea>
-          <button type="submit">Send</button>
-        </div>
-       
-      </form>
     </div>
+    <div class="product-card">
+        <img src="Access-images/product 3.jpg" alt="Product 4" class="product-image">
+        <div class="product-info">
+            <p>Product Name</p>
+            <span>Explore our Collections and find the one most suited for your project.</span>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="Access-images/product6.jpg" alt="Product 5" class="product-image">
+        <div class="product-info">
+          <p>Product Name</p>
+          <span>Explore our Collections and find the one most suited for your project.</span>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="Access-images/product 4.jpg" alt="Product 6" class="product-image">
+        <div class="product-info">
+          <p>Product Name</p>
+          <span>Explore our Collections and find the one most suited for your project.</span>
+        </div>
+    </div>
+    </div>
+   </div>
+
+   <!-- FORM -->
+
+  <div class="whypage-container">
+    <div class="why-title">
+      <h2>Why Choose Us</h2>
+    </div>
+    
+    <div class="whycard-container">
+      <div class="whycard">
+        <img src="Access-images/Untitled-1.png1.png" alt="">
+        <h3>customer Statisfaction</h3>
+
+      </div>
+      <div class="whycard">
+        <img src="Access-images/Untitled-1.png2.png" alt="">
+        <h3>Expertise</h3>
+        
+      </div>
+      <div class="whycard">
+        <img src="Access-images/Untitled-1.png3.png" alt="">
+        <h3>Our Team</h3>
+        
+      </div>
+      <div class="whycard">
+        <img src="Access-images/Untitled-1.png4.png" alt="">
+        <h3>Quality</h3>
+        
+      </div>
+    </div>
+    
   </div> 
 
   <!-- projects -->
    
-<div class="projectpage-container">
+  <div class="projectpage-container">
     <div class="title">
       <h1>Projects</h1>
     </div>
@@ -1549,69 +1269,30 @@ facts */
           </div>
       </div>
   </div>
-</div>
-<!-- suppilers -->
-
- <div class="suppliers-container">
-  <h2>Our Suppliers</h2>
-    <div class="suppliers-combany">
-    <img src="Access-images/supplier1.png" alt="">
-    <img src="Access-images/supplier2.png" alt="">
-    <img src="Access-images/supplier3.png" alt="">
-    <img src="Access-images/suppplier4.png" alt=""> 
   </div>
-</div>
 
-<!-- facts -->
 
-<div class="factpage-container">
-  <h2>Intresting Facts</h2>
-  <div class="fact-container">
-    <div class="fact-1">
+  <!-- suppliers -->
 
-      <div class="fact">
-        <img src="Access-images/icons8-trophy-48.png" alt="">
-        <h3 class="count" data-target="15">0</h3>
-       <p>Awards</p>
-   </div>
-   
- 
-   <div class="fact">
-        <img src="Access-images/icons8-space-shuttle-64.png" alt="">
-        <h3 class="count" data-target="1024">0</h3>
-       <p>Projects</p>
-   </div>
+  <div class="suppliers-container">
+    <h2>Our Suppliers</h2>
+      <div class="suppliers-combany">
+      <img src="Access-images/supplier1.png" alt="">
+      <img src="Access-images/supplier2.png" alt="">
+      <img src="Access-images/supplier3.png" alt="">
+      <img src="Access-images/suppplier4.png" alt=""> 
     </div>
-
-   <div class="fact-2">
-    <div class="fact">
-      <img src="Access-images/icons8-group-50.png" alt="">
-      <h3 class="count" data-target="1024">0</h3>
-      <p>Happy clients</p>
   </div>
+
+
   
-
-  <div class="fact">
-       <img src="Access-images/icons8-uptime-68.png" alt="">
-       <h3 class="count" data-target="99">0</h3>
-      <p>Up Time</p>
-  </div>
-   </div>
-
-
+  <!-- ESTIMATE -->
+  <div class="estimate-container">
+    <h2>NEED HELP? GET YOUR <br>RENOVATION STARTED TODAY</h2>
+    <button>SCHEDULE AN ESTIMATE</button>
   </div>
 
-</div>
-
-
-<!-- Estimate -->
- 
-<div class="estimate-container">
-  <h2>NEED HELP? GET YOUR <br>RENOVATION STARTED TODAY</h2>
-  <button>SCHEDULE AN ESTIMATE</button>
-</div>
-
-<!-- footer -->
+  <!-- footer -->
 
  <footer class="footer">
   <div class="footer-content">
@@ -1647,27 +1328,27 @@ facts */
 </footer>
 
 </div>
-<script>
+<script >
     document.addEventListener('DOMContentLoaded', () => {
-    // Array of background images for each project box
-    const backgrounds = [
-        'url("Access-images/project1.jpeg")',
-        'url("Access-images/project2.jpeg")',
-        'url("Access-images/project3.jpeg")',
-        'url("Access-images/project4.jpeg")',
-        'url("Access-images/project5.jpeg")',
-        'url("Access-images/project6.jpeg")'
-    ];
+  // Array of background images for each project box
+  const backgrounds = [
+      'url("Access-images/project1.jpeg")',
+      'url("Access-images/project2.jpeg")',
+      'url("Access-images/project3.jpeg")',
+      'url("Access-images/project4.jpeg")',
+      'url("Access-images/project5.jpeg")',
+      'url("Access-images/project6.jpeg")'
+  ];
 
-    // Select all elements with the class 'project-box'
-    const projectBoxes = document.querySelectorAll('.project-box');
+  // Select all elements with the class 'project-box'
+  const projectBoxes = document.querySelectorAll('.project-box');
 
-    // Loop through each project box and set the background image from the array
-    projectBoxes.forEach((box, index) => {
-        if (backgrounds[index]) { // Check if there's a background image for this box
-            box.style.backgroundImage = backgrounds[index];
-        }
-    });
+  // Loop through each project box and set the background image from the array
+  projectBoxes.forEach((box, index) => {
+      if (backgrounds[index]) { // Check if there's a background image for this box
+          box.style.backgroundImage = backgrounds[index];
+      }
+  });
 });
 
 
@@ -1675,48 +1356,30 @@ facts */
 
 
 
-let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
+const numbers = document.querySelectorAll('.number');
+let animationTriggered = false;
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.display = (i === index) ? "flex" : "none";
+const container = document.querySelector('.detail-container'); // Target the specific container
+
+container.addEventListener('mouseenter', () => {
+  if (!animationTriggered) {
+    animationTriggered = true; // Ensure animation runs only once on hover
+    numbers.forEach((num) => {
+      const target = +num.getAttribute('data-target'); // Target number
+      let count = 0; // Start from 0
+
+      const updateCounter = () => {
+        if (count < target) {
+          count += Math.ceil(target / 100); // Increment step
+          if (count > target) count = target; // Ensure no overshoot
+          num.textContent = count;
+          requestAnimationFrame(updateCounter); // Smooth animation
+        }
+      };
+
+      updateCounter();
     });
-}
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length; // Loop back to first slide
-    showSlide(currentSlide);
-}
-
-// Show the first slide initially
-showSlide(currentSlide);
-
-// Automatically switch slides every 5 seconds
-setInterval(nextSlide, 5000);
-
-
-
-const counters = document.querySelectorAll('.count');
-const animationDuration = 2000; // Total animation duration in milliseconds
-
-counters.forEach(counter => {
-  const updateCount = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-
-    // Calculate increment to ensure all counters finish at the same time
-    const increment = target / (animationDuration / 20); // 20ms intervals
-
-    if (count < target) {
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCount, 20); // 20ms for smooth animation
-    } else {
-      counter.innerText = target; // Ensure the final value is accurate
-    }
-  };
-
-  updateCount();
+  }
 });
 </script>
 </body>
