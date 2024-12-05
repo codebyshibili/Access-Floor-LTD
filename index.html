@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Access-Floor</title>
-    <style>
-        *{
+    <title>Access-Floor-3</title>
+ <style>
+ *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,11 +29,25 @@
     width: 100%;
     height: 100vh;
     background-color: rgb(64, 67, 66);
-    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(Access-images/1091027319-preview.gif);
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
+    background-position: center;
+    animation: bganimation 50s linear infinite;
 }
-
+@keyframes bganimation {
+    0%{
+        background-image: url(Access-images/banner\ bg_11zon.jpg);
+    }
+    40%{
+        background-image: url(Access-images/Belgotex-Colour-Rib-Lifestyle.jpg);
+    }
+    80%{
+        background-image: url(Access-images/649fe2e8882782a8aad61019_tulle-wtw-metal-hotel-room.webp);
+    }
+    100%{
+        background-image: url(Access-images/banner\ bg_11zon.jpg); 
+    }
+}
 /* ..............navbar.................. */
 
 .navbar-container{
@@ -103,7 +117,7 @@
     color: white;
     margin-top: 2%;
     letter-spacing: 1px;
-    font-family: sans-serif;
+    font-family: cursive;
 }
 .banner-container button{
     width: 220px;
@@ -191,7 +205,7 @@
     gap: 3%;
     cursor: pointer;
     transition: transform 0.2s;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(Access-images/facts.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(Access-images/65ddfbe9b9d1dc8acf8a9fc7_ARI7d5tj8U5f6ZW9Gm2w4F5G8Hj2gfe777m9gB0wouI.jpeg);
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
@@ -254,84 +268,101 @@
 }
 
 /* ....................product................................. */
-
-.product-container{
+.productpage-container{
     width: 100%;
-    height: 150vh;
+    height: 230vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(Access-images/product\ bg.jpg);;
-    background-repeat: no-repeat;
-    background-size: 100vw 150vh;
-    /* background-color: aqua; */
+    background-color:beige;
 }
 .product-title{
     width: 100%;
-    height: 10%;
+    height: 100px;
     display: flex;
     align-items: center;
-    font-size: 40px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
     padding-left: 5%;
-    background-color: rgb(45,42,99);
+    font-size: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:rgb(45,42,99);
+    color: white;
 }
-.productcard-container {
+
+.section {
     width: 90%;
-    height: 85%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* background-color: #fff; */
-    gap: 2%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(64, 34, 218); */
+}
+
+.section-title{
+    width: 100%;
+    height: 100px;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: rgb(45,42,99);
+    /* background-color: beige; */
+}
+.product-grid {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    /* background-color: blueviolet; */
 }
 
 .product-card {
-     width: 90%;
-     height: 90%;
+    width: 30%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    /* background-color: burlywood; */
+    border-radius: 25px;
     overflow: hidden;
+    border: none;
+}
+.belgotex-card{
+    width: 47%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: burlywood;    
+    border-radius: 25px;
+    overflow: hidden;
+    border: none;
+}
+.img-placeholder {
+    width: 100%;
+    height:75%;
+}
+.img-placeholder img{
+    width: 100%;
+    height: 100%;
+}
+.product-content{
+    width: 100%;
+    height: 25%;
     display: flex;
     flex-direction: column;
-    border-radius: 10px;     
-    /* background-color: bisque; */
-    animation: appear  linear;
-    animation-timeline: view();
-    animation-range: entry 5%;
-
-}
-.product-card:hover .product-info {
     align-items: center;
-    transition:  3s ease-out;
+    justify-content: center;
+    background-color: rgb(45,42,99);
+    color: white;
 }
-.product-image {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    background-color: #ccc;
-}
-
-.product-info {
-    width: 100%;
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-    gap: 3%;
-    color: whitesmoke;
-    padding-left: 3%;
-    font-family: sans-serif;
-    background-color: rgb(45, 42, 99, 0.8); 
-}
-
-.product-info p{
-    font-size: 24px;
+.product-name {
+    font-size: 1.1em;
     font-weight: bold;
-    margin-top: 3%;
 }
-.product-info span{
-    font-size: 20PX;
-    font-weight: 400;
-    color: grey;
+
+.product-desc {
+    font-size: 0.9em;
+    color: #555;
 }
 
 /* ................why.......................... */
@@ -342,7 +373,8 @@
     flex-direction: column;
     align-items: center;
     /* justify-content: center; */
-    background-color:white;
+    background-color: white;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(Access-images/product\ bg.jpg) ;
 }
 .why-title{
     width: 100%;
@@ -352,8 +384,7 @@
     padding-left: 5%;
     font-size: 32px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(45,42,99);
-    /* background-color: rgb(45,42,99); */
+    color: white;
 }
 .whycard-container{
     width: 90%;
@@ -374,7 +405,7 @@
     flex-direction: column;
     gap: 5%;
     border: 2px solid rgb(45,42,99);
-    background-color: white;
+    background-color: beige;
     border-radius: 5px;
 }
 .whycard img{
@@ -474,7 +505,7 @@
     align-items: center;
     justify-content: center;
     gap: 10%;
-    background-color: whitesmoke;
+    background-color: beige;
 }
 .suppliers-container h2{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -601,9 +632,11 @@
      font-family: sans-serif;
      font-size: 1rem;
  }
-  
+ 
+ 
 
- /* ..........................responsive................................ */
+ /* ............................................................................................................. */
+
 
  
 
@@ -620,21 +653,7 @@
     font-size: 17px;
 }
 
-/* product */
-
-.product-info p{
-    font-size: 22px;
-  
-}
-.product-info span{
-    font-size: 16px;
-}
-
-/* form */
-.form-container form h2{
-    font-size: 30px;
-    margin-right: 40%;
-}
+ 
 
 /* project */
 
@@ -704,21 +723,7 @@
 
 }
 
- /* product */
 
- .product-container{
-    height:170vh;
-    background-size: cover;  
-}
-.product-title{
-    height: 10%;
-   margin-top: 2%;
-   margin-bottom: 2%;
-}
- .productcard-container {
-    grid-template-columns: repeat(2, 1fr);
-   
-}   
  /* why */
 .whypage-container{
     height: 150vh;
@@ -824,21 +829,25 @@
     font-size:24px;
 }
 /* product */
-.product-container{
-    height: 360vh;
+.productpage-container{
+    height: 600vh;
 }
-.productcard-container{
-    grid-template-columns: repeat(1, 1fr);
+.section{
+    width: 100%;
+    height: 200vh;
+}
+.product-grid {
+    display: flex;
     align-items: center;
-    justify-content: center;
-}
-.product-title{
-    height:5%;
-    font-size:px;
+    flex-direction: column;
 }
 .product-card{
-    height: 300px;
-    margin-left: 2%;
+    width: 90%;
+    height: 80%;
+}
+.belgotex-card{
+    width: 90%;
+    height: 45%;
 }
 /* why */
 .whypage-container{
@@ -1051,17 +1060,7 @@
     height: 30px;
 }
 
-/* product */
 
-.product-title{
-    font-size: 22px;
-}
-.product-info p{
-    font-size: 14px;
-}
-.product-info span{
-    font-size: 12px;
-}
        /* why */
 
     .why-title{
@@ -1090,7 +1089,7 @@
 }
 
 }
-    </style>
+ </style>
 </head>
 <body>
 <div class="web-container">
@@ -1113,7 +1112,7 @@
     </div>
     <!-- banner -->
      <div class="banner-container">
-        <h1>Welcome to Access Floor <br> Building Material & Electrical <br> Trading LLC</h1>
+        <h1>Welcome to Access Floor</h1>
         <p>We provide all kinds of commercial flooring solutions,<br> We make it a prority to offer flexible services</p>
         <button>Get Quote</button>
      </div>
@@ -1166,56 +1165,111 @@
      </div>
 
     <!-- product -->
-    <div class="product-container">
-        <div class="product-title">
-          <h2>Our Products</h2>
-        </div>
+  <div class="productpage-container">
+    <div class="product-title">
+      <h2>PRODUCTS</h2>
+    </div>
+    <div class="section">
+      <div class="section-title">
+        <h3>Raised Access Flooring</h3>
+      </div>
+      <div class="product-grid">
+          <div class="product-card">
+              <div class="img-placeholder">
+                <img src="Access-images/product1.jpg" alt="">
+              </div>
+              <div class="product-content">
+              <h4>AFT-ACCESS FLOORING</h4>
+              <p>Exclusive product can be changed</p>
+              </div>
              
-  <div class="productcard-container">
-    <div class="product-card">
-        <img src="Access-images/product2.jpg" alt="Bare Finish Panels" class="product-image">
-        <div class="product-info">
-          <p>AFT-TECH</p>
-          <span>These elevated floors create a cavity beneath the flooring surface.</span>
-        </div>
+          </div>
+          <div class="product-card">
+              <div class="img-placeholder">
+                <img src="Access-images/product-2.jpg" alt="">
+              </div>
+              <div class="product-content">
+                <h4>MERO-TSK GERMANY</h4>
+                <p>Exclusive product can be changed</p>
+                </div>
+          </div>
+          <div class="product-card">
+              <div class="img-placeholder">
+                <img src="Access-images/product-3.jpg" alt="">
+              </div>
+              <div class="product-content">
+                <h4>UNITILE-INDIA</h4>
+                <p>Exclusive product can be changed</p>
+                </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="section">
+      <div class="section-title">
+        <h3>Belonetex Acoustic Office Carpet</h3>
+      </div>
+    
+      <div class="product-grid">
+          <div class="belgotex-card">
+              <div class="img-placeholder">
+                <img src="Access-images/product-4.jpg" alt="">
+              </div>
+              <div class="product-content">
+                <h4>AFRICAN SKIES</h4>
+                <p>Exclusive product can be changed</p>
+                </div>
+          </div>
+          <div class="belgotex-card">
+              <div class="img-placeholder">
+                <img src="Access-images/product-5.png" alt="">
+              </div>
+              <div class="product-content">
+                <h4>ACADEMIA</h4>
+                <p>Exclusive product can be changed</p>
+                </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
     </div>
-    <div class="product-card">
-        <img src="Access-images/product1.jpg" alt="Product 2" class="product-image">
-        <div class="product-info">
-          <p>AFT-Access Floor</p>
-          <span>Steel cement raised floor system is enginered to deliver  perfomance </span>
-        </div>
+      <div class="product-grid">
+          <div class="product-card">
+              <div class="img-placeholder">
+                <img src="Access-images/product-6.jpg" alt="">
+              </div>
+              <div class="product-content">
+                <h4>SPC FLOORING</h4>
+                <p>Exclusive product can be changed</p>
+                </div>
+          </div>
+          <div class="product-card">
+              <div class="img-placeholder">
+                <img src="Access-images/product-7.jpg" alt="">
+              </div>
+              <div class="product-content">
+                <h4>LVT FLOORING</h4>
+                <p>Exclusive product can be changed</p>
+                </div>
+          </div>
+          <div class="product-card">
+              <div class="img-placeholder">
+                <img src="Access-images/product-8.jpg" alt="">
+              </div>
+              <div class="product-content">
+                <h4>VINYL FLOORING</h4>
+                <p>Exclusive product can be changed</p>
+                </div>
+          </div>
+      </div>
+  </div>
+
+      </div>
     </div>
-    <div class="product-card">
-        <img src="Access-images/product5.jpg" alt="Product 3" class="product-image">
-        <div class="product-info">
-          <p>Mero-TSK Germany</p>
-          <span>Explore our Collections and find the one most suited for your project.</span>
-        </div>
-    </div>
-    <div class="product-card">
-        <img src="Access-images/product 3.jpg" alt="Product 4" class="product-image">
-        <div class="product-info">
-            <p>Belgotex-Acoustic</p>
-            <span>Explore our Collections and find the one most suited for your project.</span>
-        </div>
-    </div>
-    <div class="product-card">
-        <img src="Access-images/product6.jpg" alt="Product 5" class="product-image">
-        <div class="product-info">
-          <p>SPC-Flooring</p>
-          <span>Explore our Collections and find the one most suited for your project.</span>
-        </div>
-    </div>
-    <div class="product-card">
-        <img src="Access-images/product 4.jpg" alt="Product 6" class="product-image">
-        <div class="product-info">
-          <p>Office-Carpet</p>
-          <span>Explore our Collections and find the one most suited for your project.</span>
-        </div>
-    </div>
-    </div>
-   </div>
+    
+  </div>
 
    <!-- FORM -->
 
@@ -1253,7 +1307,7 @@
    
   <div class="projectpage-container">
     <div class="title">
-      <h1>Projects</h1>
+      <h1>PROJECTS</h1>
     </div>
  
   <div class="Projectbox-container">
@@ -1357,7 +1411,7 @@
 
 </div>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   // Array of background images for each project box
   const backgrounds = [
       'url("Access-images/project1.jpeg")',
