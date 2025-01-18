@@ -64,41 +64,6 @@ updateButtons();
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Array of background images for each project box
-  const backgrounds = [
-      'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("Access-images/p2.jpg")',
-      'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("Access-images/banner bg_11zon.jpg")',
-      'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("Access-images/product-2.jpg")',
-      'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("Access-images/form-image_11zon.png")',
-      'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("Access-images/p1.jpg")',
-      'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("Access-images/African Skies - Neptune.png")'
-  ];
-
-  // Select all elements with the class 'project-box'
-  const projectBoxes = document.querySelectorAll('.project-box');
-
-  // Loop through each project box and set the background image from the array
-  projectBoxes.forEach((box, index) => {
-      if (backgrounds[index]) { // Check if there's a background image for this box
-          box.style.backgroundImage = backgrounds[index];
-      }
-  });
-});
-
-
-const cards = document.querySelectorAll('.project-box');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-});
-
-cards.forEach(card => observer.observe(card));
-
-
 
 
 

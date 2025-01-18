@@ -116,7 +116,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color:rgb(45,42,99);
+    background-color:rgb(68, 67, 67);
     border-radius: 35px;
     position: fixed;
     top: 45%;
@@ -176,11 +176,11 @@
     height: 50px;
     border: none;
     border-radius: 5px ;
-    color: white;
+    color:black;
     font-family: "Poppins", serif;
     font-size: 16px;
     margin-top: 1%;
-    background-color:rgb(45,42,99);
+    background-color:white;
     animation: appear  linear;
     animation-timeline: view();
     animation-range: entry 3%;
@@ -258,7 +258,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:rgb(45,42,99);
+    background-color:rgb(68,67,67);
 }
 .product-cont h3{
     font-family: "Poppins", serif;
@@ -272,7 +272,7 @@
 /* Buttons */
 .slider-btn {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
@@ -334,7 +334,6 @@
     animation: appear  linear;
     animation-timeline: view();
     animation-range: entry 3%;
-
 }
 .what-cont{
     width: 100%;
@@ -353,7 +352,7 @@
     font-size: 25px;
     font-family: "Lora", serif;
     text-transform: uppercase;
-    color: rgb(45,42,99);
+    color: white;
 }
 .what-cont p{
     font-family: "Poppins", serif;
@@ -380,7 +379,8 @@
     height: 15vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
+    padding-left: 5%;
     text-transform: uppercase;
     font-family: "Lora", serif;
     font-size: 26px;
@@ -389,12 +389,12 @@
   
   details {
     width: 60%;
-    background-color: rgb(45,42,99);
+    background-color: white;
     border-radius: 10px;
     cursor: pointer;
     padding: 20px 30px;
     margin-block: 20px;
-    color: white;
+    color: black;
     animation: appear  linear;
     animation-timeline: view();
     animation-range: entry 3%;
@@ -413,7 +413,7 @@
   }
   
   summary::marker {
-    color: #fff;
+    color: black;
     font-size: 18px;
   }
 /* ................supliers................ */
@@ -428,7 +428,7 @@
     gap: 10%;
     padding-top: 3%;
     /* background-color:whitesmoke;  */
-    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),url(Access-images/supplierbg.jpg) ;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(Access-images/supplierbg.jpg) ;
     background-size: cover;
 }
 .suppliers-container h2{
@@ -447,7 +447,7 @@
     justify-content: space-between;
     animation: appear  linear;
     animation-timeline: view();
-    animation-range: entry 3%;
+    animation-range: entry 4%;
 }
 /* .................footer........................... */
 
@@ -458,6 +458,7 @@
     display: flex;
     flex-direction: column;
     background-color:black;
+    border-top: 2px solid gray;
  }
  
  .footer-content {
