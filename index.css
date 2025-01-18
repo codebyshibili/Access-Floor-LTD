@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: black;
 }
 @keyframes appear{
     from{
@@ -26,24 +27,8 @@
     height: 100vh;
     background-color:white;
     background-size: 100vw 100vh;
-    animation: bganimation 30s linear infinite;
+    transition: bganimation 1s ease-in-out;
 }
-@keyframes bganimation {
-    0%{
-      background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(Access-images/banner\ bg_11zon.jpg);
-    }
-   30%{
-     background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(Access-images/AFT-TECH\ FS1000[1].jpg);
-   }
-   60%{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(Access-images/gallery-7.jpeg);
-
-   }
-   100%{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(Access-images/banner\ bg_11zon.jpg);
-   }
-}
-
 
 /* ..............navbar.................. */
 
@@ -52,7 +37,7 @@
     height: 15vh;
     display: flex;
     justify-content: space-between;
-    /* background-color: blue; */
+    /* background-color: black; */
 }
 .navlogo-section{
     width: 15%;
@@ -89,65 +74,41 @@
     color: whitesmoke;
     text-decoration: none;
 }
-
-
-/* .................banner............... */
-
-.banner-container{
-    width: 100%; 
-    height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 5%;
-    /* justify-content: center; */
-    /* background-color: blueviolet; */
+.nav-items a:hover{
+    color: rgb(45,42,99);
 }
 
+/* .................banner............... */
+.banner-container{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    /* justify-content: center; */
+    padding-left: 5%;
+    align-items: center;
+}
+  
 .banner-container h1{
     font-size: 85px;
     font-family: "Lora", serif;
-    position: relative;
-    color: transparent;
-    -webkit-text-stroke: 0.1rem white;
-    background-image: linear-gradient(white, white);
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-position: -89rem 0;
-    padding: 0 1rem;
-    /* set the minimum position value so that the color did not show up. if you add padding then add extra padding value also for example here at first it was -64rem later I add 1rem padding both left and right side of the text. then we have to change the -66rem position */
-    animation: animate 6s linear infinite;
+    /* text-align: center; */
+    color: white;
 }
-
-
-.banner-container h1::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    border-right: 4px solid white;
-    animation: lineAnimate 6s linear infinite;
-}
-
-@keyframes animate {
-    0%, 10%, 100%{
-        background-position: -89rem 0;
+.fade-in {
+    animation: fadeInText 1s ease-in-out;
+  }
+  
+  /* Define fade-in animation */
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
     }
-    80%,90%{
-        background-position: 0 0;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-}
-
-@keyframes lineAnimate {
-    0%, 10%, 100%{
-        width: 0%;
-    }
-    80%,90%{
-        width: 60%;
-    }
-}
+  }
 .banner-icons{
     width: 60px;
     height: 200px;
@@ -161,6 +122,9 @@
     top: 45%;
     right: 1%;
     z-index: 1;
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 3%;
 }
 
 /* ...........about.................... */
@@ -222,7 +186,9 @@
     animation-range: entry 3%;
 }
 
-/* .........product........... */
+/* .........product..............*/
+
+
 .product-page-container{
     width: 100%;
     height: 100vh;
@@ -329,142 +295,131 @@
   background-color: rgba(0, 0, 0, 0.2);
   cursor: not-allowed;
 }
-/* ................why.......................... */
-.whypage-container{
+/* ................what we do ................... */
+.whatwe-page-container{
     width: 100%;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
-    background-color: white;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),url(Access-images/product\ bg.jpg) ;
+    height: 120vh;
+    background-color: black;
 }
-.why-title{
-    width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    font-family: "Lora", serif;
-    color: white;
-}
-.whycard-container{
-    width: 90%;
-    height: 50%;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    /* background-color: bisque; */
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5%;
-}
-.whycard{
-    width: 300px;
-    height: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 5%;
-    border: 2px solid rgb(45,42,99);
-    background-color: whitesmoke;
-    border-radius: 5px;
-    animation: appear  linear;
-    animation-timeline: view();
-    animation-range: entry 5%;
-}
-.whycard img{
-    width: 60%;
-
-}
-.whycard h3{
-    font-size:22px;
-    font-family: "Poppins", serif;
-    font-weight: 500;
-    color: rgb(45,42,99);
-}
-
-/* .........project........... */
-
-.projectpage-container{
-    width: 100%;
-    height: 150vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color:black;
-}
-.projectpage-container .title{
+.what-we-title{
     width: 100%;
     height: 20vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-family: "Lora", serif;
-    font-size: 28px;
+    padding-left: 5%;
+    font-size: 26px;
     color: white;
-    /* background: rgb(45,42,99); */
+    font-family: "Lora", serif;
+    /* background-color: aqua;  */
 }
-
-
-.Projectbox-container{
-    width: 90%;
-    height: 120vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.project-box {
-    width:100%;
-    height: 100%;
+.what-container{
+    width: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    /* background-color: rgb(40, 21, 207); */
-    background-size:cover;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    justify-content: space-around;
+    /* background-color: #007bff; */
 }
-.project-box.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.flooring-type{
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: aquamarine; */
+}
+.flooring-type img{
+    width: 100%;
+    height: 70%;
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 3%;
 
-.projectbox-info{
-    width: 95%;
-    height: 95%;
+}
+.what-cont{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0% 0% 0% 0%;
+    gap: 5%;
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 3%;
+    /* background-color: rgb(45,42,99); */
+}
+.what-cont h3{
+    font-size: 25px;
+    font-family: "Lora", serif;
+    text-transform: uppercase;
+    color: rgb(45,42,99);
+}
+.what-cont p{
+    font-family: "Poppins", serif;
+    font-size: 18px;
+    color: grey;
+}
+
+
+
+/* .................faq..........*/
+
+
+.faq {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
-    color: white;
-    gap: 2%;
-    border: 2px solid white;
+    background-color: black;
+  }
+  
+  .faqtitle {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    /* background-color: burlywood; */
+    text-transform: uppercase;
+    font-family: "Lora", serif;
+    font-size: 26px;
+    color: white;
+  }
+  
+  details {
+    width: 60%;
+    background-color: rgb(45,42,99);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 20px 30px;
+    margin-block: 20px;
+    color: white;
     animation: appear  linear;
     animation-timeline: view();
-    animation-range: entry 5%;
-}
-.projectbox-info h3{
-    font-size: 22px;
-    font-family: "Lora", serif;
-    color: white;
-}
-.projectbox-info p{
-    font-size: 18px;
+    animation-range: entry 3%;
+  }
+  
+  summary,
+  p {
+    text-align: left;
     font-family: "Poppins", serif;
-    color: whitesmoke;
-}
+    font-size: 20px;
+  }
+  
+  summary {
+    margin-inline-start: 1rem;
+    list-style-position: outside;
+  }
+  
+  summary::marker {
+    color: #fff;
+    font-size: 18px;
+  }
 /* ................supliers................ */
 
 .suppliers-container{
-    width: 100%;
+    width: 90%;
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -472,13 +427,15 @@
     /* justify-content: center; */
     gap: 10%;
     padding-top: 3%;
-    background-color:whitesmoke; 
+    /* background-color:whitesmoke;  */
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),url(Access-images/supplierbg.jpg) ;
+    background-size: cover;
 }
 .suppliers-container h2{
     font-family: "Lora", serif;
     font-size: 52px;
     font-weight: bolder;
-    color: rgb(45,42,99);
+    color: white;
     /* text-decoration: underline; */
 }
 .suppliers-combany{
@@ -490,15 +447,13 @@
     justify-content: space-between;
     animation: appear  linear;
     animation-timeline: view();
-    animation-range: entry 3%;
+    animation-range: entry 3%;
 }
-
-
 /* .................footer........................... */
 
 .footer {
     width: 100%;
-    height: 60vh;
+    height: 50vh;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -572,8 +527,122 @@
      border-top: 2px solid #444;
      /* background-color: black; */
      color: whitesmoke;
-     font-weight: bold;
+     font-weight: 400;
      font-family: sans-serif;
      font-size: 1rem;
  }
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media (max-width:769px){
+
+       .nav-banner-container{
+           height: 80vh;
+       }
+       /* nav */
+       .navlogo-section{
+        width: 20%;
+       }
+       .navlogo-section img{
+        width: 150px;
+       }
+       .nav-items {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: rgb(45,42,99);
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        font-family: "Poppins", serif;
+      }
+
+    .nav-items a {
+        line-height: 10px;
+    }
+
+    .nav-items label {
+        position: absolute;
+        top: -1%;
+        right: 5%;
+    }
+    .nav-items label img{
+        margin-top: 50%;
+    }
+    .nav-items input {
+        display: block;
+    }
+
+    #checking:checked~.nav-items {
+        right: 0;
+    }
+
+
+    .navbar-container label {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .navbar-container label img{
+        width: 60%;
+    }
+
+
+    /* banner */
+    .banner-container{
+        height: 65vh;
+        padding-left: 0;
+    }
+    .banner-container h1{
+       font-size: 55px;
+    }
+  
+    /* about */
+    .about-container{
+        height: 150vh;
+        flex-direction: column;
+        /* background-color: aqua; */
+    }
+    .about-img{
+        width: 100%;
+        height: 80vh;
+        /* background-color: bisque; */
+    }
+    .about-img img{
+        width: 80%;
+        height: 90%;
+    }
+    .about-cont{
+        width: 100%;
+        height: 70vh;
+        padding-left: 10%;
+        padding-top: 0;
+        /* background-color: rgb(68, 202, 44); */
+        gap: 10px;
+    }
+
+
+    /* product */
+    .card{
+        width: 600px;
+        height: 300px;
+    }
+ }
+
