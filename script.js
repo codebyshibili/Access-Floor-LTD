@@ -70,23 +70,21 @@ updateButtons();
 let counter = 0;
 
 const contentArray = [
-  "Transform Your Space <br> with Premium Carpets",
-  "Quality and Durability",
-  "Functional Access Floors <br> for Every Environment",
-  "The Perfect Flooring <br>Experience"
+  "<span>Introducing Belgotex</span> <br>Acoustic Office Carpets",
+  "<span>Expertly Crafted </span> <br> Luxury Vinyl Tiles",
+  "<span>Expert Raised</span>  <br> Access Flooring Solutions",
 ];
 
 const imagesArray = [
   "Access-images/banner-1.jpg",
   "Access-images/banner-2.jpg",
   "Access-images/banner-3.jpg",
-  "Access-images/banner-1.jpg"
 ];
 
 function changeContentAndBackground() {
   // Change background image in nav-banner-container
   const bgUrl = imagesArray[counter];
-  document.querySelector('.nav-banner-container').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(${bgUrl})`;
+  document.querySelector('.nav-banner-container').style.backgroundImage = `url(${bgUrl})`;
 
   // Change content inside the content-container
   const contentElement = document.getElementById("content");

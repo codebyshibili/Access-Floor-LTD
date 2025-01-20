@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black;
+    background-color: whitesmoke;
 }
 @keyframes appear{
     from{
@@ -34,10 +34,14 @@
 
 .navbar-container{
     width: 100%;
-    height: 15vh;
+    height: 12vh;
     display: flex;
     justify-content: space-between;
-    /* background-color: black; */
+    background-color:black;
+    border-bottom: 2px solid black;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 .navlogo-section{
     width: 15%;
@@ -71,28 +75,59 @@
 .nav-items a{
     font-size: 18px;
     font-family: "Poppins", serif;
-    color: whitesmoke;
+    color:whitesmoke;
     text-decoration: none;
 }
 .nav-items a:hover{
-    color: rgb(45,42,99);
+    /* color: rgb(45,42,99); */
+    text-decoration:overline 2px solid rgb(45,42,99);
 }
 
 /* .................banner............... */
 .banner-container{
     width: 100%;
-    height: 85vh;
+    height: 88vh;
     display: flex;
-    /* justify-content: center; */
-    padding-left: 5%;
+    justify-content: center;
+    padding-top: 10%;
     align-items: center;
 }
-  
+.banner-cont{
+    width: 40%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 5%; */
+    background: rgba(0, 0, 0, 0.6);
+    position: relative;
+    border: 2px solid transparent;
+    /* border-radius: 25px; */
+}
+.banner-cont::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Diagonal half effect */
+    height: 100%;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+    /* transform: skewX(-45deg); */
+    transform-origin: top left;
+    /* border-radius: 25px; */
+}
 .banner-container h1{
-    font-size: 85px;
-    font-family: "Lora", serif;
+    font-size: 45px;
+    font-family: "Lato", serif;
     /* text-align: center; */
+    color:white;
+}
+.banner-container span{
+    font-size: 25px;
     color: white;
+    font-weight: 500;
+    font-family: "Poppins", serif;
 }
 .fade-in {
     animation: fadeInText 1s ease-in-out;
@@ -116,10 +151,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color:rgb(68, 67, 67);
+    /* background-color:rgb(68, 67, 67); */
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 35px;
     position: fixed;
-    top: 45%;
+    top: 55%;
     right: 1%;
     z-index: 1;
     animation: appear  linear;
@@ -132,7 +168,7 @@
     width: 100%;
     height: 100vh;
     display: flex;
-    background-color: black;
+    /* background-color: black; */
 }
 .about-img{
     width: 50%;
@@ -162,13 +198,13 @@
     /* background-color: blueviolet; */
 }
 .about-cont  h2{
-    font-family: "Lora", serif;
+    font-family: "Lato", serif;
     font-size: 36px;
-    color:white;
+    color:black;
 }
 .about-cont p{
     font-family: "Poppins", serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: grey;
 }
 .about-cont button{
@@ -176,11 +212,11 @@
     height: 50px;
     border: none;
     border-radius: 5px ;
-    color:black;
+    color:white;
     font-family: "Poppins", serif;
     font-size: 16px;
     margin-top: 1%;
-    background-color:white;
+    background-color:black;
     animation: appear  linear;
     animation-timeline: view();
     animation-range: entry 3%;
@@ -195,7 +231,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black;
+    /* background-color: black; */
 }
 .product-title{
     width: 100%;
@@ -203,9 +239,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Lora", serif;
+    font-family: "Lato", serif;
     font-size: 26px;
-    color: white;
+    /* color: white; */
     /* background-color: aqua; */
 }
 /* Slider Container */
@@ -244,7 +280,7 @@
 }
 .product-image{
     width: 100%;
-    height: 70%;
+    height: 75%;
     background-color: rgb(198, 54, 54);
 }
 .product-image img{
@@ -254,20 +290,21 @@
 }
 .product-cont{
     width: 100%;
-    height: 30%;
+    height: 25%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:rgb(68,67,67);
+    background-color: black;
+    /* background-color:rgb(68,67,67); */
 }
 .product-cont h3{
     font-family: "Poppins", serif;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
 }
 .product-cont span{
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
 }
 /* Buttons */
 .slider-btn {
@@ -299,7 +336,7 @@
 .whatwe-page-container{
     width: 100%;
     height: 120vh;
-    background-color: black;
+    /* background-color: black; */
 }
 .what-we-title{
     width: 100%;
@@ -308,8 +345,8 @@
     align-items: center;
     padding-left: 5%;
     font-size: 26px;
-    color: white;
-    font-family: "Lora", serif;
+    /* color: white; */
+    font-family: "Lato", serif;
     /* background-color: aqua;  */
 }
 .what-container{
@@ -350,9 +387,9 @@
 }
 .what-cont h3{
     font-size: 25px;
-    font-family: "Lora", serif;
+    font-family: "Lato", serif;
     text-transform: uppercase;
-    color: white;
+    /* color: white; */
 }
 .what-cont p{
     font-family: "Poppins", serif;
@@ -370,8 +407,9 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: black;
+    /* align-items: center; */
+    padding-left: 5%;
+    /* background-color: black; */
   }
   
   .faqtitle {
@@ -380,21 +418,20 @@
     display: flex;
     align-items: center;
     /* justify-content: center; */
-    padding-left: 5%;
-    text-transform: uppercase;
-    font-family: "Lora", serif;
+    /* padding-left: 5%; */
+    font-family: "Lato", serif;
     font-size: 26px;
-    color: white;
+    /* color: white; */
   }
   
   details {
-    width: 60%;
-    background-color: white;
+    width: 80%;
+    background-color:black;
     border-radius: 10px;
     cursor: pointer;
     padding: 20px 30px;
     margin-block: 20px;
-    color: black;
+    color:white;
     animation: appear  linear;
     animation-timeline: view();
     animation-range: entry 3%;
@@ -413,7 +450,7 @@
   }
   
   summary::marker {
-    color: black;
+    color: white;
     font-size: 18px;
   }
 /* ................supliers................ */
@@ -427,16 +464,15 @@
     /* justify-content: center; */
     gap: 10%;
     padding-top: 3%;
-    /* background-color:whitesmoke;  */
-    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(Access-images/supplierbg.jpg) ;
+    background-color:whitesmoke; 
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.9)),url(Access-images/supplierbg.jpg) ;
     background-size: cover;
 }
 .suppliers-container h2{
-    font-family: "Lora", serif;
-    font-size: 52px;
+    font-family: "Lato", serif;
+    font-size: 46px;
     font-weight: bolder;
-    color: white;
-    /* text-decoration: underline; */
+    color:white;
 }
 .suppliers-combany{
     width: 70%;
@@ -445,9 +481,9 @@
     gap: 5%;
     align-items: center;
     justify-content: space-between;
-    animation: appear  linear;
+    /* animation: appear  linear;
     animation-timeline: view();
-    animation-range: entry 4%;
+    animation-range: entry 4%; */
 }
 /* .................footer........................... */
 
@@ -479,6 +515,7 @@
      margin-top: 3%;
      font-weight: bold;
      color: whitesmoke;
+     font-family: "Lato", serif;
  }
  
  .footer-section ul {
@@ -529,7 +566,7 @@
      /* background-color: black; */
      color: whitesmoke;
      font-weight: 400;
-     font-family: sans-serif;
+     font-family: "Lato", serif;
      font-size: 1rem;
  }
  
