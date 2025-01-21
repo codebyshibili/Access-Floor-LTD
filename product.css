@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.about-web-container{
+.gallery-web-container{
     width: 100%;
     height: auto;
     display: flex;
@@ -93,88 +93,72 @@
     font-family: "Lato", serif;
     color: white;
     font-size: 42px;
+    text-transform: uppercase;
+    text-align: center;
 }
 .banner-container span{
     color: rgb(45,42,99);
+    font-size: 42px;
 }
 
-/* ...........about................ */
-
-.about-container{
+/* .........product................ */
+.product-page-container{
     width: 100%;
-    display: flex;
-    height: 100vh;
-}
-.about-img {
-    width: 50%;
-    height: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: aqua; */
+    /* background-color: rgb(105, 38, 156); */
 }
-.about-img img{
-    width: 80%;
-    height: 80%;
-    /* border:  5px solid black;
-    padding: 2%; */
+
+.product-container{
+    width:80%;
+    height: 360vh;
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.product{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: blueviolet; */
     animation: appear  linear;
     animation-timeline: view();
     animation-range: entry 3%;
 }
-.about-cont{
-    width: 50%;
-    height: 100%;
-    padding-left: 2%;
-    padding-right: 3%;
-    display: flex;
-    flex-direction: column;
-    gap: 2%;
-    justify-content: center;
-    /* animation: appear  linear;
-    animation-timeline: view();
-    animation-range: entry 5%; */
-    /* background-color: aqua; */
-}
-.about-cont h2{
-    font-family: "Lato", serif;
-    font-size: 36px;
-}
-.about-cont p{
-    font-family: "Poppins", serif;
-    color: grey;
-    font-size: 1.08rem;
-}
-
-/* ..........banner-2............... */
-
-.banner2-container{
+.product img{
     width: 100%;
-    height: 60vh;
+    height:380px ;
+}
+.product-details{
+    width: 100%;
+    height: 220px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 25px;
+    justify-content: center;
+    padding-left:5%;
+    padding-right: 2%;
+    gap: 10px;
+    /* background-color: rgb(23, 237, 237); */
+}
+.product-details h3{
     font-family: "Lato", serif;
-    color: white;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),url(Access-images/banner2-bg.png) ;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: rgb(181, 181, 41);
+    font-size: 22px;
 }
-.banner2-container button{
-    width: 250px;
-    height: 60px;
-    border-radius: 10px;
-    border: none;
-    font-family: "Poppins", serif;
+.product-details span{
     font-size: 18px;
-    animation: appear  linear;
-    animation-timeline: view();
-    animation-range: entry 5%;
+    font-weight: 500;
 }
-
+.product-details p{
+    font-family: "Poppins", serif;
+    font-size: 1.02rem;
+    color: grey;
+}
 /* .................footer........................... */
 
 .footer {
@@ -258,4 +242,3 @@
      font-family: "Lato", serif;
      font-size: 1rem;
  }
- 

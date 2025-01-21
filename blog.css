@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.about-web-container{
+.gallery-web-container{
     width: 100%;
     height: auto;
     display: flex;
@@ -93,87 +93,88 @@
     font-family: "Lato", serif;
     color: white;
     font-size: 42px;
+    text-transform: uppercase;
+    text-align: center;
 }
 .banner-container span{
     color: rgb(45,42,99);
+    font-size: 42px;
 }
-
-/* ...........about................ */
-
-.about-container{
+/* ................blog.......................... */
+.blog-page-container{
     width: 100%;
-    display: flex;
     height: 100vh;
-}
-.about-img {
-    width: 50%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: aqua; */
+    background-color: whitesmoke;
+    gap: 3%;
 }
-.about-img img{
-    width: 80%;
-    height: 80%;
-    /* border:  5px solid black;
-    padding: 2%; */
-    animation: appear  linear;
-    animation-timeline: view();
-    animation-range: entry 3%;
-}
-.about-cont{
-    width: 50%;
-    height: 100%;
-    padding-left: 2%;
-    padding-right: 3%;
+.blog-card{
+    width: 350px;
+    height: 550px;
     display: flex;
     flex-direction: column;
-    gap: 2%;
-    justify-content: center;
-    /* animation: appear  linear;
-    animation-timeline: view();
-    animation-range: entry 5%; */
-    /* background-color: aqua; */
+    background-color:white;
 }
-.about-cont h2{
-    font-family: "Lato", serif;
-    font-size: 36px;
+.blog-card img{
+     width: 100%;
+     height: 35%;
 }
-.about-cont p{
-    font-family: "Poppins", serif;
-    color: grey;
-    font-size: 1.08rem;
-}
-
-/* ..........banner-2............... */
-
-.banner2-container{
+.profile{
     width: 100%;
-    height: 60vh;
+    height:15%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    font-size: 25px;
-    font-family: "Lato", serif;
-    color: white;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),url(Access-images/banner2-bg.png) ;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: rgb(181, 181, 41);
+    /* background-color: beige; */
+    gap: 2%;
 }
-.banner2-container button{
-    width: 250px;
-    height: 60px;
-    border-radius: 10px;
-    border: none;
+.profile img{
+    width: 50px;
+    height: 50px;
+    margin-left: 5%;
+}
+.profile p{
+    font-size: 15px;
     font-family: "Poppins", serif;
-    font-size: 18px;
-    animation: appear  linear;
-    animation-timeline: view();
-    animation-range: entry 5%;
+    color: gray;
+    font-weight: 200;
 }
+.content{
+    width: 100%;
+    height: 40%;
+}
+.content h3{
+    font-size: 22px;
+    font-family: "Lato", serif;
+    margin-left: 8%;
+}
+.content p{
+    font-size: 18px;
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    margin-left: 8%;
+    margin-top: 5%;
+}
+.card-footer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    /* background-color: aqua; */
+    gap: 20%;
+    padding-left: 8%;
+}
+.card-footer p{
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", serif;
+    gap: 2%;
+}
+.card-footer img{
+    width: 20px;
+}
+
 
 /* .................footer........................... */
 
@@ -258,4 +259,3 @@
      font-family: "Lato", serif;
      font-size: 1rem;
  }
- 
