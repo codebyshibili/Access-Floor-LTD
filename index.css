@@ -348,6 +348,10 @@
     /* color: white; */
     font-family: "Lato", serif;
     /* background-color: aqua;  */
+    /* text-decoration: underline 2px  rgb(45,42,99); */
+}
+.what-we-title h2{
+    /* border-bottom: 2px solid black; padding-bottom: 5px; display: inline-block; */
 }
 .what-container{
     width: 100%;
@@ -566,7 +570,7 @@
      color: whitesmoke;
      font-weight: 400;
      font-family: "Lato", serif;
-     font-size: 1rem;
+     font-size: 16px;
  }
  
 
@@ -582,7 +586,10 @@
 
 
 
- @media (max-width:769px){
+ @media (max-width:768px){
+    .web-container{
+        max-width: 768px;
+    }
 
        .nav-banner-container{
            height: 80vh;
@@ -683,7 +690,7 @@
 
     /* product */
     .card {
-        width: auto;
+        max-width: 100%;
         height: 400px;
         flex: 0 0 calc(100% - 16px); /* Show one card per slide on smaller screens */
     }
@@ -726,3 +733,227 @@
 
  }
 
+
+
+
+ 
+ @media (max-width:426px){
+     /* nav */
+
+    .navlogo-section{
+        width: 30%;
+    }
+    .navlogo-section img{
+        width: 120px;
+    }
+     /* banner */
+    
+    .banner-container h1{
+        font-size: 2rem;
+    }
+    .banner-container span{
+        font-size: 1.2rem;
+    }
+    .banner-cont{
+        width: 90%;
+        height: 50%;
+    }
+    .banner-icons{
+        width: 50px;
+        height: 160px;
+        top: 52%;
+    }
+    .banner-icons img{
+        width: 40px;
+    }
+    
+    /* about */
+    .about-container{
+        height: 130vh;
+        flex-direction: column;
+        /* background-color: aqua; */
+    }
+    .about-img{
+        width: 100%;
+        height: 50vh;
+        /* background-color: bisque; */
+    }
+    .about-img img{
+        width: 90%;
+        height: 90%;
+    }
+    .about-cont{
+        width: 100%;
+        height: 80vh;
+        padding-left: 10%;
+        padding-top: 0;
+        /* background-color: rgb(68, 202, 44); */
+        gap: 10px;
+    }
+    .about-cont p{
+        font-size: 1rem;
+    }
+
+
+      /* product */
+
+      .product-page-container{
+        height: 90vh;
+        /* background-color: aqua; */
+      }
+      .card {
+        max-width:100%;
+        height: 400px;
+        flex: 0 0 calc(100% - 16px); /* Show one card per slide on smaller screens */
+    }
+
+      /* what we */
+      .whatwe-page-container{
+        height: 240vh;
+        /* background-color: rgb(160, 160, 54); */
+    }
+    .what-we-title{
+        height: 15vh;
+        padding-left: 0;
+        justify-content: center;
+    }
+    .what-container{
+        height: 220vh;
+        flex-direction: column;
+        /* background-color: aqua; */
+    }
+    .flooring-type{
+        width: 90%;
+        height: 50%;
+        flex-direction: column-reverse;
+    }
+    .flooring-type img{
+        height: 50%;
+    }
+    
+    /* .suppliers */
+    .suppliers-container{
+        height: 40vh;
+    }
+
+    /* faq */
+    .faqtitle{
+        font-size:18px;
+    }
+    summary,
+    p {
+        font-size: 1rem;
+    }
+
+    /* footer */
+    .footer-bottom p{
+        font-size: 14px;
+      
+    }
+ }
+
+
+
+
+
+
+
+ @media (max-width:376px){
+         /* banner */
+    
+         .banner-container h1{
+            font-size: 1.5rem;
+        }
+        .banner-container span{
+            font-size: 1rem;
+        }
+        .banner-cont{
+            width: 90%;
+            height: 50%;
+        }
+        .banner-icons{
+            width: 50px;
+            height: 160px;
+            top: 52%;
+        }
+        .banner-icons img{
+            width: 40px;
+        }
+
+        /* .about */
+
+        .about-cont h2{
+            font-size: 28px;
+        }
+        .about-cont p{
+            font-size: 0.9rem;
+        }
+
+        
+      /* product */
+
+      .product-page-container{
+        height: 80vh;
+        /* background-color: aqua; */
+      }
+      .card {
+        max-width:100%;
+        height: 300px;
+        flex: 0 0 calc(100% - 16px); /* Show one card per slide on smaller screens */
+      }
+      .product-cont h3{
+        font-size: 18px;
+
+      }
+
+
+        /* footer */
+    .footer-bottom p{
+        font-size: 12px;
+      
+    }
+
+
+ }
+
+
+
+
+
+
+
+
+
+ 
+ @media (max-width:321px){
+
+       /* nav */
+
+       .navlogo-section{
+        width: 40%;
+    }
+    .navlogo-section img{
+        width: 120px;
+    }
+    .what-cont h3{
+        font-size: 22px;
+    }
+    .what-cont p{
+        font-size: 1rem;
+    }
+
+     /* faq */
+     .faqtitle{
+        font-size:16px;
+    }
+    summary,
+    p {
+        font-size: 0.8rem;
+    }
+     /* footer */
+     .footer-bottom p{
+        font-size: 10px;
+      
+    }
+    
+ }
