@@ -252,3 +252,233 @@
      font-size: 1rem;
  }
  
+
+
+
+
+
+
+
+
+
+
+ @media (max-width:768px){
+
+    .nav-banner-container{
+        height: 80vh;
+    }
+    /* nav */
+    .navlogo-section{
+     width: 20%;
+    }
+    .navlogo-section img{
+     width: 150px;
+    }
+    .nav-items {
+     display: block;
+     position: fixed;
+     top: 0;
+     right: -100%;
+     background-color:black;
+     width: 40%;
+     height: 50%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-evenly;
+     font-family: "Poppins", serif;
+     border-radius: 10px;
+   }
+
+ .nav-items a {
+     line-height: 10px;
+ }
+
+ .nav-items label {
+     position: absolute;
+     top: -1%;
+     right: 5%;
+ }
+ .nav-items label img{
+     margin-top: 50%;
+ }
+ .nav-items input {
+     display: block;
+ }
+
+ #checking:checked~.nav-items {
+     right: 0;
+ }
+
+
+ .navbar-container label {
+     display: block;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     
+ }
+ .navbar-container label img{
+     width: 60%;
+ }
+
+
+
+ /* product */
+
+ .project-page-container{
+    height: 530vh;
+ }
+ .project-title{
+    font-size: 22px;
+    height: 15vh;
+ }
+
+ .project-container{
+    grid-template-columns: repeat(1,1fr); 
+ }
+
+     /* footer */
+     .footer{
+        height: 15vh;
+    }
+    .footer-content{
+        display: none;
+    }
+    .footer-bottom{
+        height: 100%;
+        border: none;
+    }   
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+ @media (max-width:480px){
+        /* nav */
+    .navlogo-section{
+            width: 30%;
+    }
+    .navlogo-section img{
+            width: 150px;
+    }
+    .banner-container h1{
+        font-size: 22px;
+    }
+     /* product */
+
+ .project-page-container{
+    height: 535vh;
+ }
+ .project-title{
+    font-size: 20px;
+    height: 15vh;
+ }
+
+ .project-container{
+    grid-template-columns: repeat(1,1fr); 
+ }
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+ @media (max-width:426px){
+          /* nav */
+    .navlogo-section{
+            width: 35%;
+    }
+    .navlogo-section img{
+            width: 150px;
+    }
+
+         /* product */
+
+ .project-page-container{
+    height: 535vh;
+ }
+ .project-title{
+    font-size: 18px;
+    height: 15vh;
+ }
+}
+
+
+
+
+
+
+
+
+@media (max-width:376px){
+
+             /* nav */
+        .navlogo-section{
+                width: 40%;
+        }
+        .navlogo-section img{
+                width: 120px;
+        }
+
+        
+         /* product */
+
+ .project-page-container{
+    height: 535vh;
+ }
+ .project-title{
+    font-size: 16px;
+    height: 15vh;
+ }
+
+ .footer-bottom{
+    font-size: 14px;
+ }
+
+}
+
+
+
+
+
+
+
+
+@media (max-width:320px){
+             /* product */
+
+ .project-page-container{
+    height: 385vh;
+ }
+ .project-card{
+    height: 350px;
+ }
+ .project-title{
+    font-size: 14px;
+    height: 15vh;
+ }
+ .footer-bottom{
+    font-size: 12px;
+ }
+
+}
+
+
+

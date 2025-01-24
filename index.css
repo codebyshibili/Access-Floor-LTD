@@ -739,6 +739,165 @@
 
 
 
+
+
+
+
+
+ @media (max-width:480px){
+
+       /* nav */
+
+       .navlogo-section{
+        width: 30%;
+    }
+    .navlogo-section img{
+        width: 120px;
+    }
+    .banner-container h1{
+        font-size: 1.8rem;
+    }
+    .banner-container span{
+        font-size: 1.2rem;
+    }
+    .banner-cont{
+        width: 90%;
+        height: 50%;
+    }
+    .banner-icons{
+        width: 50px;
+        height: 160px;
+        top: 52%;
+    }
+    .banner-icons img{
+        width: 40px;
+    }
+
+
+
+
+     /* about */
+     .about-container{
+        height: 115vh;
+        flex-direction: column;
+        /* background-color: aqua; */
+    }
+    .about-img{
+        width: 100%;
+        height: 50vh;
+        /* background-color: bisque; */
+    }
+    .about-img img{
+        width: 90%;
+        height: 95%;
+    }
+    .about-cont{
+        width: 100%;
+        height: 65vh;
+        padding-left: 6%;
+        padding-top: 0;
+        /* background-color: rgb(68, 202, 44); */
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    .about-cont h2{
+        font-size: 28px;
+    }
+    .about-cont p{
+        font-size: 1rem;
+    }
+    
+      /* product */
+
+      .product-page-container{
+        height: 80vh;
+        /* background-color: aqua; */
+      }
+      .product-title{
+        font-size: 22px;
+      }
+      .card {
+        max-width:100%;
+        height: 400px;
+        flex: 0 0 calc(100% - 16px); /* Show one card per slide on smaller screens */
+    }
+
+          /* what we */
+          .whatwe-page-container{
+            height: 200vh;
+            /* background-color: rgb(160, 160, 54); */
+        }
+        .what-we-title{
+            height: 10vh;
+            padding-left: 0;
+            justify-content: center;
+            font-size: 22px;
+            /* background-color: rgb(133, 16, 192); */
+        }
+        .what-container{
+            height:190vh;
+            flex-direction: column;
+            /* background-color: aqua; */
+            justify-content: space-between;
+        }
+        .flooring-type{
+            width: 90%;
+            height: 90vh;
+            justify-content: flex-start;
+            flex-direction: column-reverse;
+            /* background-color: #b07070; */
+        }
+        .flooring-type img{
+            height: 60%;
+        }
+        .what-cont {
+            height: 40%;
+            justify-content: flex-start;
+            /* background-color: aqua; */
+        }
+        .what-cont h3{
+            font-size: 1.2rem;
+        }
+      /* .suppliers */
+    .suppliers-container{
+        height: 30vh;
+    }
+    .suppliers-container h2{
+        font-size: 28px;
+    }
+    .suppliers-combany img{
+        width: 30%;
+    }
+
+        /* faq */
+        .faqtitle{
+            font-size:18px;
+        }
+        summary,
+        p {
+            font-size: 1rem;
+        }
+    
+        /* footer */
+        .footer-bottom p{
+            font-size: 14px;
+          
+        }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
  
  @media (max-width:426px){
      /* nav */
@@ -772,7 +931,7 @@
     
     /* about */
     .about-container{
-        height: 130vh;
+        height: 125vh;
         flex-direction: column;
         /* background-color: aqua; */
     }
@@ -787,7 +946,7 @@
     }
     .about-cont{
         width: 100%;
-        height: 80vh;
+        height: 75vh;
         padding-left: 6%;
         padding-top: 0;
         /* background-color: rgb(68, 202, 44); */
@@ -804,53 +963,57 @@
       /* product */
 
       .product-page-container{
-        height: 80vh;
+        height: 70vh;
         /* background-color: aqua; */
       }
       .product-title{
         font-size: 22px;
+        height: 10vh;
       }
       .card {
         max-width:100%;
-        height: 400px;
+        height: 350px;
         flex: 0 0 calc(100% - 16px); /* Show one card per slide on smaller screens */
     }
 
       /* what we */
       .whatwe-page-container{
-        height: 215vh;
+        height: 180vh;
         /* background-color: rgb(160, 160, 54); */
     }
     .what-we-title{
-        height: 15vh;
+        height: 10vh;
         padding-left: 0;
         justify-content: center;
         font-size: 22px;
         /* background-color: rgb(133, 16, 192); */
     }
     .what-container{
-        height: 200vh;
+        height: 170vh;
         flex-direction: column;
         /* background-color: aqua; */
         justify-content: space-between;
     }
     .flooring-type{
         width: 90%;
-        height: 49%;
+        height: 90vh;
         justify-content: flex-start;
         flex-direction: column-reverse;
         /* background-color: #fff; */
     }
     .flooring-type img{
-        height: 50%;
+        height: 55%;
     }
     .what-cont {
-        height: 50%;
+        height: 40%;
         justify-content: flex-start;
-        padding-top: 5%;
+        /* background-color: aqua; */
     }
     .what-cont h3{
         font-size: 1.2rem;
+    }
+    .what-cont p{
+        font-size: 1rem;
     }
     /* .suppliers */
     .suppliers-container{

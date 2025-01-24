@@ -242,3 +242,185 @@
      font-family: "Lato", serif;
      font-size: 1rem;
  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media (max-width:769px){
+
+    .web-container{
+        max-width: 768px;
+    }
+
+       .nav-banner-container{
+           height: 80vh;
+       }
+       /* nav */
+       .navlogo-section{
+        width: 20%;
+       }
+       .navlogo-section img{
+        width: 150px;
+       }
+       .nav-items {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color:black;
+        width: 40%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        font-family: "Poppins", serif;
+        border-radius: 10px;
+      }
+
+    .nav-items a {
+        line-height: 10px;
+    }
+
+    .nav-items label {
+        position: absolute;
+        top: -1%;
+        right: 5%;
+    }
+    .nav-items label img{
+        margin-top: 50%;
+    }
+    .nav-items input {
+        display: block;
+    }
+
+    #checking:checked~.nav-items {
+        right: 0;
+    }
+
+
+    .navbar-container label {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .navbar-container label img{
+        width: 60%;
+    }
+          /* banner */
+          .banner-container h1{
+            font-size: 28px;
+        }
+
+     /* products */
+
+     .product-container{
+        width: 90%;
+        height:700vh;
+        grid-template-columns: repeat(1,1fr);
+        gap: 5px;
+        /* background-color: aqua; */
+     }
+     .product{
+        height: 500px;
+        /* background-color: blue; */
+     }
+     .product img{
+        width: 100%;
+        height: 70%;
+     }
+     .product-details{
+        padding-left: 0;
+        padding-right: 0;
+     }
+
+         /* footer */
+    .footer{
+        height: 15vh;
+    }
+    .footer-content{
+        display: none;
+    }
+    .footer-bottom{
+        height: 100%;
+        border: none;
+    }
+
+ }
+ 
+
+
+
+
+
+
+
+ @media (max-width:426px){
+
+      /* nav */
+
+   .navlogo-section{
+    width: 35%;
+   }
+   .navlogo-section img{
+    width: 150px;
+   }
+    /* banner */
+    .banner-container h1{
+     font-size: 22px;
+    }
+
+
+         /* products */
+
+         .product-container{
+            width: 90%;
+            height:680vh;
+            grid-template-columns: repeat(1,1fr);
+            gap: 5px;
+            /* background-color: aqua; */
+         }
+         .product{
+            height: 500px;
+            /* background-color: blue; */
+         }
+         .product img{
+            width: 100%;
+            height: 55%;
+         }
+         .product-details{
+            height: 45%;
+            padding-left: 0;
+            padding-right: 0;
+         }
+
+ }
+
+
+
+ 
+ @media (max-width:375px){
+
+    .banner-container h1{
+        font-size: 20px;
+    }
+    .banner-container span{
+        font-size: 20px;
+    }
+
+ }
