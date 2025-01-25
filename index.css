@@ -931,7 +931,7 @@
     
     /* about */
     .about-container{
-        height: 125vh;
+        height: 115vh;
         flex-direction: column;
         /* background-color: aqua; */
     }
@@ -968,7 +968,7 @@
       }
       .product-title{
         font-size: 22px;
-        height: 10vh;
+        height: 5vh;
       }
       .card {
         max-width:100%;
@@ -978,11 +978,11 @@
 
       /* what we */
       .whatwe-page-container{
-        height: 180vh;
+        height: 170vh;
         /* background-color: rgb(160, 160, 54); */
     }
     .what-we-title{
-        height: 10vh;
+        height: 5vh;
         padding-left: 0;
         justify-content: center;
         font-size: 22px;
@@ -1071,6 +1071,9 @@
         }
 
         /* .about */
+        .about-container{
+            height: 105vh;
+        }
 
         .about-cont h2{
             font-size: 24px;
@@ -1083,8 +1086,11 @@
       /* product */
 
       .product-page-container{
-        height: 80vh;
+        height: 60vh;
         /* background-color: aqua; */
+      }
+      .product-title{
+        height: 5vh;
       }
       .card {
         max-width:100%;
@@ -1128,12 +1134,15 @@
         font-size: 20px;
     }
         /* .about */
-
+         .about-container{
+            height: 80vh;
+            /* background-color: aqua; */
+         }
         .about-cont h2{
             font-size: 22px;
         }
         .about-cont p{
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
         .about-cont button{
             width: 150px;
@@ -1142,7 +1151,7 @@
         }
 
     .product-page-container{
-        height: 70vh;
+        height: 50vh;
     }
 
 
@@ -1150,10 +1159,10 @@
         font-size: 0.8rem;
     }
     .whatwe-page-container{
-        height: 150vh;
+        height: 130vh;
     }
     .what-container{
-        height: 130vh;
+        height: 125vh;
     }
     .what-cont h3{
         font-size: 18px;

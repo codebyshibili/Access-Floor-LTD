@@ -384,26 +384,18 @@
     iframe{
       height: 50vh;
     }
-       /* foooter */
-    
-       .footer {
-        height: auto;
-     }
+       /* footer */
+       .footer{
+        height: 15vh;
+    }
     .footer-content{
-        flex-direction: column;
-        align-items: flex-start;
-
+        display: none;
     }
-    .footer-section h3 {
-        margin-top: 8%;
+    .footer-bottom{
+        height: 100%;
+        border: none;
     }
-    .footer-bottom {
-        align-items: center;
-        font-size:12px ;
-        margin-top: 8%;
-        margin-bottom: 5%;
-        padding-top: 5%;
-    }
+ 
   }
 
 
