@@ -325,7 +325,14 @@
  /* blog */
  .blog-page-container{
     flex-direction: column;
-    height:300vh;
+    height:auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+ }
+ .blog-card{
+    margin-top: 20px;
+    height: 600px;
+    width: 80%;
  }
 
      /* footer */

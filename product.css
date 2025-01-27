@@ -270,7 +270,8 @@
        }
        /* nav */
        .navlogo-section{
-        width: 20%;
+        width: auto;
+        padding-left: 5%;
        }
        .navlogo-section img{
         width: 150px;
@@ -331,7 +332,7 @@
 
      .product-container{
         width: 90%;
-        height:700vh;
+        height:auto;
         grid-template-columns: repeat(1,1fr);
         gap: 5px;
         /* background-color: aqua; */
@@ -390,7 +391,7 @@
 
          .product-container{
             width: 90%;
-            height:680vh;
+            height:auto;
             grid-template-columns: repeat(1,1fr);
             gap: 5px;
             /* background-color: aqua; */
@@ -407,6 +408,7 @@
             height: 45%;
             padding-left: 0;
             padding-right: 0;
+            margin-top: 5px;
          }
 
  }
