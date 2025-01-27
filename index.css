@@ -244,6 +244,19 @@
     /* color: white; */
     /* background-color: aqua; */
 }
+.product-title h2{
+    position: relative;
+    display: inline-block;
+}
+.product-title h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 50%; /* Creates the "gap" */
+    bottom: 0;
+    height: 3px; /* Thickness of the underline */
+    background:rgb(45,42,99); /* Color of the underline */
+}
 /* Slider Container */
 .slider-container {
   position: relative;
@@ -351,7 +364,17 @@
     /* text-decoration: underline 2px  rgb(45,42,99); */
 }
 .what-we-title h2{
-    /* border-bottom: 2px solid black; padding-bottom: 5px; display: inline-block; */
+    position: relative;
+    display: inline-block;
+}
+.what-we-title h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 50%; /* Creates the "gap" */
+    bottom: 0;
+    height: 3px; /* Thickness of the underline */
+    background: rgb(45,42,99); /* Color of the underline */
 }
 .what-container{
     width: 100%;
@@ -478,6 +501,7 @@
     font-weight: bolder;
     color:white;
 }
+
 .suppliers-combany{
     width: 70%;
     height: 50%;
@@ -596,7 +620,9 @@
        }
        /* nav */
        .navlogo-section{
-        width: 20%;
+        width: auto;
+        padding-left: 5%;
+
        }
        .navlogo-section img{
         width: 150px;
@@ -667,30 +693,42 @@
   
     /* about */
     .about-container{
-        height: 150vh;
+        height: auto;
         flex-direction: column;
         /* background-color: aqua; */
     }
     .about-img{
         width: 100%;
-        height: 80vh;
+        height: auto;
         /* background-color: bisque; */
     }
     .about-img img{
-        width: 80%;
-        height: 90%;
+        width: 90%;
+        height: auto;
     }
     .about-cont{
         width: 100%;
-        height: 70vh;
-        padding-left: 10%;
-        padding-top: 0;
+        height: auto;
+        padding-left: 5%;
+        padding-top: 20px;
         /* background-color: rgb(68, 202, 44); */
         gap: 10px;
     }
 
 
     /* product */
+    .product-page-container{
+        height: auto;
+        /* background-color: aqua; */
+    }
+    .product-title{
+        height: auto;
+        /* background-color: beige; */
+        padding: 20px;
+    }
+    .slider-container{
+        height: auto;
+    }
     .card {
         max-width: 100%;
         height: 400px;
@@ -699,22 +737,47 @@
 
     /* what we */
     .whatwe-page-container{
-        height: 250vh;
+        height: auto;
+    }
+    .what-we-title{
+        height: auto;
+        padding-top: 50px;
     }
     .what-container{
-        height: 230vh;
+        height: auto;
         flex-direction: column;
         /* background-color: aqua; */
     }
     .flooring-type{
         width: 90%;
-        height: 46%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        flex-direction: column;
+    }
+    #flooring-type-2{
+        display: flex;
         flex-direction: column-reverse;
+    }
+    .flooring-type img{
+        height: 400px;
+    }
+    .what-cont{
+        margin-top: 10px;
+        margin-bottom: 5px;
     }
 
     /* supppliers */
+    .suppliers-container{
+        height: auto;
+    }
+    .suppliers-container h2{
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
     .suppliers-combany img{
         width: 30%;
+        margin-top: 5%;
+        margin-bottom: 5%;
     }
 
     /* FAQ */
@@ -724,7 +787,8 @@
 
     /* footer */
     .footer{
-        height: 15vh;
+        height: auto;
+        padding: 40px;
     }
     .footer-content{
         display: none;
@@ -778,41 +842,33 @@
 
      /* about */
      .about-container{
-        height: 115vh;
         flex-direction: column;
         /* background-color: aqua; */
     }
     .about-img{
         width: 100%;
-        height: 50vh;
         /* background-color: bisque; */
     }
     .about-img img{
         width: 90%;
-        height: 95%;
     }
     .about-cont{
         width: 100%;
-        height: 65vh;
         padding-left: 6%;
         padding-top: 0;
         /* background-color: rgb(68, 202, 44); */
         justify-content: flex-start;
-        gap: 10px;
+
     }
     .about-cont h2{
-        font-size: 28px;
+        font-size: 24px;
+        margin-top: 10px;
     }
     .about-cont p{
         font-size: 1rem;
     }
     
       /* product */
-
-      .product-page-container{
-        height: 80vh;
-        /* background-color: aqua; */
-      }
       .product-title{
         font-size: 22px;
       }
@@ -822,67 +878,42 @@
         flex: 0 0 calc(100% - 16px); /* Show one card per slide on smaller screens */
     }
 
-          /* what we */
-          .whatwe-page-container{
-            height: 200vh;
-            /* background-color: rgb(160, 160, 54); */
-        }
-        .what-we-title{
-            height: 10vh;
-            padding-left: 0;
-            justify-content: center;
-            font-size: 22px;
-            /* background-color: rgb(133, 16, 192); */
-        }
-        .what-container{
-            height:190vh;
-            flex-direction: column;
-            /* background-color: aqua; */
-            justify-content: space-between;
-        }
-        .flooring-type{
-            width: 90%;
-            height: 90vh;
-            justify-content: flex-start;
-            flex-direction: column-reverse;
-            /* background-color: #b07070; */
-        }
-        .flooring-type img{
-            height: 60%;
-        }
-        .what-cont {
-            height: 40%;
-            justify-content: flex-start;
-            /* background-color: aqua; */
-        }
-        .what-cont h3{
-            font-size: 1.2rem;
-        }
-      /* .suppliers */
-    .suppliers-container{
-        height: 30vh;
+    /* what we */
+
+    .flooring-type img{
+        height: 300px;
     }
-    .suppliers-container h2{
-        font-size: 28px;
-    }
-    .suppliers-combany img{
-        width: 30%;
+    .what-cont h3{
+        font-size: 1.4rem;
     }
 
-        /* faq */
-        .faqtitle{
-            font-size:18px;
-        }
-        summary,
-        p {
-            font-size: 1rem;
-        }
-    
-        /* footer */
-        .footer-bottom p{
-            font-size: 14px;
-          
-        }
+    /* FAQ */
+    .faqtitle{
+        height: auto;
+        font-size: 22PX;
+        padding: 10px;
+    }
+    summary,
+    p {
+      text-align: left;
+      font-family: "Poppins", serif;
+      font-size: 16px;
+    }
+
+    /* FOOTER */
+
+    .footer-bottom p{
+        font-size: 13px;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width:425px){
 
 }
 
@@ -893,296 +924,3 @@
 
 
 
-
-
-
-
-
- 
- @media (max-width:426px){
-     /* nav */
-
-    .navlogo-section{
-        width: 30%;
-    }
-    .navlogo-section img{
-        width: 120px;
-    }
-     /* banner */
-    
-    .banner-container h1{
-        font-size: 1.8rem;
-    }
-    .banner-container span{
-        font-size: 1.2rem;
-    }
-    .banner-cont{
-        width: 90%;
-        height: 50%;
-    }
-    .banner-icons{
-        width: 50px;
-        height: 160px;
-        top: 52%;
-    }
-    .banner-icons img{
-        width: 40px;
-    }
-    
-    /* about */
-    .about-container{
-        height: 115vh;
-        flex-direction: column;
-        /* background-color: aqua; */
-    }
-    .about-img{
-        width: 100%;
-        height: 50vh;
-        /* background-color: bisque; */
-    }
-    .about-img img{
-        width: 90%;
-        height: 95%;
-    }
-    .about-cont{
-        width: 100%;
-        height: 75vh;
-        padding-left: 6%;
-        padding-top: 0;
-        /* background-color: rgb(68, 202, 44); */
-        gap: 10px;
-    }
-    .about-cont h2{
-        font-size: 28px;
-    }
-    .about-cont p{
-        font-size: 1rem;
-    }
-
-
-      /* product */
-
-      .product-page-container{
-        height: 70vh;
-        /* background-color: aqua; */
-      }
-      .product-title{
-        font-size: 22px;
-        height: 5vh;
-      }
-      .card {
-        max-width:100%;
-        height: 350px;
-        flex: 0 0 calc(100% - 16px); /* Show one card per slide on smaller screens */
-    }
-
-      /* what we */
-      .whatwe-page-container{
-        height: 170vh;
-        /* background-color: rgb(160, 160, 54); */
-    }
-    .what-we-title{
-        height: 5vh;
-        padding-left: 0;
-        justify-content: center;
-        font-size: 22px;
-        /* background-color: rgb(133, 16, 192); */
-    }
-    .what-container{
-        height: 170vh;
-        flex-direction: column;
-        /* background-color: aqua; */
-        justify-content: space-between;
-    }
-    .flooring-type{
-        width: 90%;
-        height: 90vh;
-        justify-content: flex-start;
-        flex-direction: column-reverse;
-        /* background-color: #fff; */
-    }
-    .flooring-type img{
-        height: 55%;
-    }
-    .what-cont {
-        height: 40%;
-        justify-content: flex-start;
-        /* background-color: aqua; */
-    }
-    .what-cont h3{
-        font-size: 1.2rem;
-    }
-    .what-cont p{
-        font-size: 1rem;
-    }
-    /* .suppliers */
-    .suppliers-container{
-        height: 30vh;
-    }
-    .suppliers-container h2{
-        font-size: 28px;
-    }
-    .suppliers-combany img{
-        width: 35%;
-    }
-
-    /* faq */
-    .faqtitle{
-        font-size:18px;
-    }
-    summary,
-    p {
-        font-size: 1rem;
-    }
-
-    /* footer */
-    .footer-bottom p{
-        font-size: 14px;
-      
-    }
- }
-
-
-
-
-
-
-
- @media (max-width:376px){
-         /* banner */
-    
-         .banner-container h1{
-            font-size: 1.5rem;
-        }
-        .banner-container span{
-            font-size: 1rem;
-        }
-        .banner-cont{
-            width: 90%;
-            height: 50%;
-        }
-        .banner-icons{
-            width: 50px;
-            height: 160px;
-            top: 52%;
-        }
-        .banner-icons img{
-            width: 40px;
-        }
-
-        /* .about */
-        .about-container{
-            height: 105vh;
-        }
-
-        .about-cont h2{
-            font-size: 24px;
-        }
-        .about-cont p{
-            font-size: 0.9rem;
-        }
-
-        
-      /* product */
-
-      .product-page-container{
-        height: 60vh;
-        /* background-color: aqua; */
-      }
-      .product-title{
-        height: 5vh;
-      }
-      .card {
-        max-width:100%;
-        height: 300px;
-        flex: 0 0 calc(100% - 16px); /* Show one card per slide on smaller screens */
-      }
-      .product-cont h3{
-        font-size: 18px;
-      }
-
-
-        /* footer */
-    .footer-bottom p{
-        font-size: 12px;
-      
-    }
-
-
- }
-
-
-
-
-
-
-
-
-
- 
- @media (max-width:321px){
-
-       /* nav */
-
-       .navlogo-section{
-        width: 40%;
-    }
-    .navlogo-section img{
-        width: 120px;
-    }
-    .banner-container h1{
-        font-size: 20px;
-    }
-        /* .about */
-         .about-container{
-            height: 80vh;
-            /* background-color: aqua; */
-         }
-        .about-cont h2{
-            font-size: 22px;
-        }
-        .about-cont p{
-            font-size: 0.8rem;
-        }
-        .about-cont button{
-            width: 150px;
-            height: 40px;
-            font-size: 12px;
-        }
-
-    .product-page-container{
-        height: 50vh;
-    }
-
-
-    .product-cont span{
-        font-size: 0.8rem;
-    }
-    .whatwe-page-container{
-        height: 130vh;
-    }
-    .what-container{
-        height: 125vh;
-    }
-    .what-cont h3{
-        font-size: 18px;
-    }
-    .what-cont p{
-        font-size: 0.8rem;
-    }
-
-     /* faq */
-     .faqtitle{
-        font-size:16px;
-    }
-    summary,
-    p {
-        font-size: 0.8rem;
-    }
-     /* footer */
-     .footer-bottom p{
-        font-size: 10px;
-      
-    }
-    
- }
