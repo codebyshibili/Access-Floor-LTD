@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.gallery-web-container{
+.web-container{
     width: 100%;
     height: auto;
     display: flex;
@@ -24,22 +24,21 @@
 }
 .nav-banner-container{
     width: 100%;
-    height: 70vh;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),url(Access-images/supplierbg.jpg) ;
-    background-size: cover;
-    background-color:aqua;
+    height: 100vh;
+    background-color:white;
+    background-size: 100vw 100vh;
+    transition: bganimation 1s ease-in-out;
 }
-
-
 
 /* ..............navbar.................. */
 
 .navbar-container{
     width: 100%;
-    height: 15vh;
+    height: 12vh;
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background-color:black;
+    border-bottom: 2px solid black;
 }
 .navlogo-section{
     width: 15%;
@@ -73,103 +72,89 @@
 .nav-items a{
     font-size: 18px;
     font-family: "Poppins", serif;
-    color: whitesmoke;
+    color:whitesmoke;
     text-decoration: none;
 }
 .nav-items a:hover{
-    text-decoration: overline 2px solid white;
+    /* color: rgb(45,42,99); */
+    text-decoration:overline 2px solid white;
 }
 
-/* .........banner.............. */
-.banner-container{
-    width: 100%;
-    height: 55vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: blue; */
-}
-.banner-container h1{
-    font-family: "Lato", serif;
-    color: white;
-    font-size: 42px;
-    text-transform: uppercase;
-    text-align: center;
-}
-.banner-container span{
-    color: rgb(45,42,99);
-    font-size: 42px;
-}
 
-/* .........product................ */
-.product-page-container{
+/*................ product............ */
+
+.product-container{
     width: 100%;
     height: auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: rgb(105, 38, 156); */
+    flex-direction: column;
+    background-color: whitesmoke;
 }
 
-.product-container{
-    width:80%;
-    height: 360vh;
-    /* background-color: aqua; */
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 3%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-.product{
+.product-title{
     width: 100%;
-    height: 600px;
+    padding: 50px;
     display: flex;
-    flex-direction: column;
-    /* background-color: blueviolet; */
-    animation: appear  linear;
-    animation-timeline: view();
-    animation-range: entry 3%;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aquamarine; */
+    font-family: "Lato", serif;
+    font-size: 32px;
 }
-.product img{
-    width: 100%;
-    height:380px ;
-}
+
 .product-details{
     width: 100%;
-    height: 220px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* padding-left:5%; */
-    padding-right: 2%;
-    gap: 10px;
-    /* background-color: rgb(23, 237, 237); */
+    align-items: center;
+    
 }
-.product-details h3{
-    font-family: "Lato", serif;
-    font-size: 22px;
+.product-details img{
+    width: 70%;
+    height: 500px;
 }
-.product-details span{
-    font-size: 18px;
-    font-weight: 500;
+.product-cont{
+    width: 70%;
+    height: auto;
 }
-.product-details p{
+.product-cont p{
+    font-size: 1.1rem;
+    color: gray;
     font-family: "Poppins", serif;
-    font-size: 1.02rem;
-    color: grey;
-    text-align: justify;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
-.product-details button{
-    width: 200px;
-   padding: 15px;
-   background-color: black;
-   color: white;
-   font-family: "Poppins", serif;
-   font-size: 0.8rem;
-   font-weight: 400;
-   border-radius: 5px;
+.product-buttons{
+    width: 70%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 }
+.product-buttons button{
+    width: 250px;
+    padding: 15px;
+    font-size: 1rem;
+    font-family: "Poppins", serif;
+    color: whitesmoke;
+    background-color: black;
+    border-radius: 5px;
+}
+#pdf-btn{
+    background-color: rgb(45,42,99);
+}
+
+
+
+
+
+
+
+
+
+
+
 /* .................footer........................... */
 
 .footer {
@@ -257,28 +242,11 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
  @media (max-width:769px){
-
     .web-container{
         max-width: 768px;
     }
 
-       .nav-banner-container{
-           height: 80vh;
-       }
        /* nav */
        .navlogo-section{
         width: auto;
@@ -334,115 +302,47 @@
     .navbar-container label img{
         width: 60%;
     }
-          /* banner */
-          .banner-container h1{
-            font-size: 28px;
+
+
+
+    /* product */
+ 
+    .product-details img{
+        width: 90%;
+    }
+    .product-cont{
+        width: 90%;
+    }
+
+
+           /* footer */
+           .footer{
+            height: 15vh;
+        }
+        .footer-content{
+            display: none;
+        }
+        .footer-bottom{
+            height: 100%;
+            border: none;
         }
 
-     /* products */
+ }
 
-     .product-container{
-        width: 90%;
-        height:auto;
-        grid-template-columns: repeat(1,1fr);
-        gap: 10px;
-        /* background-color: aqua; */
-     }
-     .product{
-        height: auto;
-        margin-top: 10px;
-        /* background-color: blue; */
-     }
-     .product img{
-        width: 100%;
-        height: 70%;
-     }
-     .product-details{
-        padding-left: 0;
-        padding-right: 0;
-        height: auto;
-        margin-top: 5px;
-     }
+ @media (max-width:480px){
 
-         /* footer */
-    .footer{
-        height: 15vh;
+    .product-title{
+        font-size: 22px;
+        text-align: center;
     }
-    .footer-content{
-        display: none;
+    
+    .product-buttons{
+        display: flex;
+        flex-direction: column;
     }
-    .footer-bottom{
-        height: 100%;
-        border: none;
+    .product-details img{
+        height: 300px;
     }
 
  }
  
-
-
-
-
-
-
-
- @media (max-width:426px){
-
-      /* nav */
-
-   .navlogo-section{
-    width: 35%;
-   }
-   .navlogo-section img{
-    width: 150px;
-   }
-    /* banner */
-    .banner-container h1{
-     font-size: 22px;
-    }
-
-
-         /* products */
-
-         .product-container{
-            width: 90%;
-            height:auto;
-            grid-template-columns: repeat(1,1fr);
-            gap: 5px;
-            /* background-color: aqua; */
-         }
-         .product{
-            height: 500px;
-            /* background-color: blue; */
-         }
-         .product img{
-            width: 100%;
-            height: 55%;
-         }
-         .product-details{
-            height: 45%;
-            padding-left: 0;
-            padding-right: 0;
-            margin-top: 5px;
-         }
-         .product-details h3{
-            font-size: 20px;
-         }
-         .product-details p{
-            font-size: 16px;
-         }
-       
- }
-
-
-
- 
- @media (max-width:375px){
-
-    .banner-container h1{
-        font-size: 20px;
-    }
-    .banner-container span{
-        font-size: 20px;
-    }
-
- }

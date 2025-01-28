@@ -244,28 +244,57 @@
     /* color: white; */
     /* background-color: aqua; */
 }
-.product-title h2:before {
+.product-title h2 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+   
+    font-weight: 300;
+    font-size: 40px;
+    color: #080808;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+  }
+  
+  .product-title h2 span {
+    display: block;
+    font-size: 0.5em;
+    line-height: 1.3;
+  }
+  .product-title h2 em {
+    font-style: normal;
+    font-weight: 600;
+  }
+  
+  /* === HEADING STYLE #1 === */
+  .product-title h2  {
+    text-align: center;
+    padding-bottom: 5px;
+  }
+  .product-title h2:before {
     width: 28px;
     height: 5px;
-    display: none;
+    display: block;
     content: "";
     position: absolute;
     bottom: 3px;
     left: 50%;
     margin-left: -14px;
-    background-color: rgb(45,42,99);
+    background-color: black;
   }
   .product-title h2:after {
     width: 100px;
-    height: 3px;
+    height: 1px;
     display: block;
     content: "";
     position: relative;
     margin-top: 25px;
     left: 50%;
     margin-left: -50px;
-    background-color: rgb(45,42,99);
+    background-color: #483285;
   }
+  
 /* Slider Container */
 .slider-container {
   position: relative;
@@ -293,7 +322,7 @@
 /* Card */
 .card {
   flex: 0 0 calc(33.33% - 16px); 
-  background-color: #007bff;
+ /** background-color: #007bff;*/
   color: #fff;
   text-align: center;
   width: 300px;
@@ -372,28 +401,57 @@
     /* background-color: aqua;  */
     /* text-decoration: underline 2px  rgb(45,42,99); */
 }
-.what-we-title h2:before {
+.what-we-title h2 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+   
+    font-weight: 300;
+    font-size: 40px;
+    color: #080808;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+  }
+  
+  .what-we-title h2 span {
+    display: block;
+    font-size: 0.5em;
+    line-height: 1.3;
+  }
+  .what-we-title h2 em {
+    font-style: normal;
+    font-weight: 600;
+  }
+  
+  /* === HEADING STYLE #1 === */
+  .what-we-title h2  {
+    text-align: center;
+    padding-bottom: 5px;
+  }
+  .what-we-title h2:before {
     width: 28px;
     height: 5px;
-    display:none;
+    display: block;
     content: "";
     position: absolute;
     bottom: 3px;
     left: 50%;
     margin-left: -14px;
-    background-color: rgb(45,42,99);
+    background-color: black;
   }
   .what-we-title h2:after {
     width: 100px;
-    height: 3px;
+    height: 1px;
     display: block;
     content: "";
     position: relative;
     margin-top: 25px;
     left: 50%;
     margin-left: -50px;
-    background-color: rgb(45,42,99);
+    background-color: #483285;
   }
+  
 .what-container{
     width: 100%;
     height: 100vh;
@@ -753,6 +811,7 @@
         flex: 0 0 calc(100% - 16px); /* Show one card per slide on smaller screens */
     }
 
+
     /* what we */
     .whatwe-page-container{
         height: auto;
@@ -890,9 +949,16 @@
     .about-cont p{
         font-size: 1rem;
     }
-    
+    .product-cont{
+        width: 100%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+    }
       /* product */
-      .product-title{
+      .product-title h2{
         font-size: 22px;
       }
       .card {
@@ -900,7 +966,9 @@
         height: 400px;
         flex: 0 0 calc(100% - 16px); /* Show one card per slide on smaller screens */
     }
-
+.product-cont h3{
+font-size: 25px;
+}
     /* what we */
 
     .flooring-type img{
@@ -946,23 +1014,49 @@
     /* about */
 
     .about-cont h2{
-        font-size: 24px;
+        font-size: 18px;
+        letter-spacing: 1.5px;
+    }
+    .about-cont p{
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-align: justify;
     }
 
     /* product */
     .product-title{
         padding: 60px;
     }
-
+    .product-title h2{
+        font-size: 27px;
+        font-weight: 500;
+    }
+    .product-cont h3{
+        font-size: 18px;
+    }
+    .product-cont h3 span{
+        font-size: 15px;
+    }
 
     /* what -we */
 
     .what-we-title{
         padding: 40px;
-        font-size: 24px;
+        font-size: 18px;
+    }
+    .what-we-title h2{
+        font-size: 27px;
+        font-weight: 500;
     }
     .what-cont{
         margin-bottom:20px;
+    }
+    .what-cont h3{
+        font-size: 17px;
+    }
+    .what-cont p{
+        font-size: 13px;
+        text-align: justify;
     }
 
     .flooring-type{
@@ -972,20 +1066,33 @@
         margin-bottom: 5%;
     }
 
+
+    .flooring-type img{
+        height: auto;
+    }
+
     /* .suppliers-combany */
     .suppliers-container{
         margin-top: 25px;
     }
     .suppliers-container h2{
         font-size: 26px;
+       
     }
       
     /* faq */
-    .
-
-    .faqtitle{
-        font-size: 1.1rem;
+    .faqtitle h2{
+        font-size: 22px;
     }
+    .faq summary{
+        font-size: 14px;
+    }
+
+
+    .faq p{
+        font-size: 13px;
+    }
+
     
     /* footer */
      
